@@ -49,7 +49,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "www1", "www1\", "{DA9721F5-
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "root", "root", "{7BE4610A-7720-429F-830D-8554DF3C638B}"
 	ProjectSection(SolutionItems) = preProject
-		_index.html = _index.html
+		index.html = index.html
 	EndProjectSection
 EndProject
 Global
