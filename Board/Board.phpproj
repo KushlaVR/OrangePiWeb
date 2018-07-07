@@ -1,0 +1,49 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>Board</Name>
+    <ProjectGuid>{1516b129-ec6c-4570-8448-fd72daa389ed}</ProjectGuid>
+    <RootNamespace>
+    </RootNamespace>
+    <OutputType>Library</OutputType>
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+    <RuntimeVersion>7.1</RuntimeVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include=".gitattributes" />
+    <Compile Include=".gitignore" />
+    <Compile Include=".htaccess" />
+    <Compile Include="composer.json" />
+    <Compile Include="index.php" />
+    <Compile Include="web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="css\" />
+    <Folder Include="img\" />
+    <Folder Include="js\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\template.css" />
+    <Content Include="img\board-1.jpg" />
+    <Content Include="img\board-2.jpg" />
+    <Content Include="img\board-3.jpg" />
+    <Content Include="img\my.jpg" />
+    <Content Include="js\bootstrap.bundle.js" />
+    <Content Include="js\bootstrap.bundle.js.map" />
+    <Content Include="js\bootstrap.bundle.min.js" />
+    <Content Include="js\bootstrap.bundle.min.js.map" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.js.map" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\bootstrap.min.js.map" />
+    <Content Include="js\jquery-3.0.0.js" />
+  </ItemGroup>
+</Project>

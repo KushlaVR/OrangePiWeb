@@ -3,65 +3,22 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2003
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "OrangePiPrime", "OrangePiPrime\", "{2B8174FA-0DC7-42AF-AC2B-493D8536120E}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_52574"
-		Debug.AspNetCompiler.PhysicalPath = "OrangePiPrime\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52574\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_52574"
-		Release.AspNetCompiler.PhysicalPath = "OrangePiPrime\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52574\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "52574"
-		SlnRelativePath = "OrangePiPrime\"
-		DefaultWebSiteLanguage = "Visual C#"
-	EndProjectSection
-EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "www1", "www1\", "{DA9721F5-92EA-4565-8A27-020086F617B4}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_54827"
-		Debug.AspNetCompiler.PhysicalPath = "www1\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54827\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_54827"
-		Release.AspNetCompiler.PhysicalPath = "www1\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54827\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "54827"
-		SlnRelativePath = "www1\"
-		DefaultWebSiteLanguage = "Visual C#"
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "root", "root", "{7BE4610A-7720-429F-830D-8554DF3C638B}"
 	ProjectSection(SolutionItems) = preProject
 		index.html = index.html
 		index.php = index.php
 	EndProjectSection
 EndProject
+Project("{A0786B88-2ADB-4C21-ABE8-AA2D79766269}") = "Board", "Board\Board.phpproj", "{1516B129-EC6C-4570-8448-FD72DAA389ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2B8174FA-0DC7-42AF-AC2B-493D8536120E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2B8174FA-0DC7-42AF-AC2B-493D8536120E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DA9721F5-92EA-4565-8A27-020086F617B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DA9721F5-92EA-4565-8A27-020086F617B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1516B129-EC6C-4570-8448-FD72DAA389ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1516B129-EC6C-4570-8448-FD72DAA389ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

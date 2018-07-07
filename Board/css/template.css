@@ -1,0 +1,250 @@
+.nav.menu {
+    background: white;
+    margin: auto;
+    top: 10px;
+    box-shadow: 2px 2px 1px #00000038;
+    text-align: center;
+}
+
+    .nav.menu li {
+        margin: 5px;
+    }
+
+        .nav.menu li.item-101 {
+            display: none;
+        }
+
+#mapbtn {
+}
+
+#hiddenmap {
+    width: 100%;
+}
+
+.contacts {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 10px;
+}
+
+.nav.menu-big {
+    text-align: center;
+}
+
+    .nav.menu-big ul {
+        list-style: none;
+        margin: auto;
+        padding: 0;
+    }
+
+        .nav.menu-big ul li {
+            display: inline-block;
+            vertical-align: top;
+            margin: 3px;
+            margin-top: 10px;
+        }
+
+            .nav.menu-big ul li a {
+                margin: 7px;
+                width: 200px;
+                height: 340px;
+                text-align: left;
+                font-size: 34px;
+                display: block;
+                word-wrap: normal;
+                color: white;
+                white-space: normal;
+                line-height: 1;
+            }
+
+                .nav.menu-big ul li a img {
+                    margin: -6px;
+                    margin-bottom: 7px;
+                    width: 212px;
+                }
+
+
+    .nav.menu-big li:nth-child(5n+1) {
+        background: orange;
+    }
+
+    .nav.menu-big li:nth-child(5n+2) {
+        background: #FB3100;
+    }
+
+    .nav.menu-big li:nth-child(5n+3) {
+        background: #1BC6E0;
+    }
+
+    .nav.menu-big li:nth-child(5n+4) {
+        background: #70C62F;
+    }
+
+    .nav.menu-big li:nth-child(5n+5) {
+        background: #3e54c3;
+    }
+
+    .nav.menu-big li a span {
+        font-size: 30px;
+    }
+
+
+
+.logo {
+    height: 250px;
+    width: 100%;
+}
+    .logo img {
+        max-height: 160px;
+        margin-top: 30px;
+    }
+
+
+@media (min-width: 576px) {
+    .logo img {
+        max-height: 110px;
+    }
+
+    .contacts{
+        visibility:hidden;
+    }
+}
+
+@media (min-width: 768px) {
+    .logo img {
+        max-height: 90px;
+    }
+
+    .contacts {
+        visibility: visible;
+    }
+}
+
+@media (min-width: 992px) {
+    .logo img {
+        max-height: 145px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .logo img {
+        max-height: 170px;
+    }
+}
+
+
+
+
+
+.logo-bg {
+    background-color: whitesmoke;
+    background-image: url(../images/Art-polygraph-bg.jpg);
+    background-size: auto 250px;
+}
+
+.site-content {
+    width: 1200px;
+    margin-top: -20px;
+    background: #ffffffc7;
+    z-index: 1;
+    box-shadow: 2px 2px 2px #00000038;
+    margin-bottom: -15px;
+    border: 1px solid #f1f0f0;
+}
+
+.footer {
+    background: #1bc6e0d9;
+    color: white;
+    width: 100%;
+}
+
+
+.col-digital-printing {
+    vertical-align: top;
+    width: 19%;
+    text-align: left;
+}
+
+    .col-digital-printing li::before {
+        background: orange; /* or whatever color you prefer */
+    }
+
+.col-offset-printing {
+    vertical-align: top;
+    width: 19%;
+    text-align: left;
+}
+
+    .col-offset-printing li::before {
+        background: #FB3100; /* or whatever color you prefer */
+    }
+
+
+
+.col-widescreen-printing {
+    vertical-align: top;
+    width: 19%;
+    text-align: left;
+}
+
+    .col-widescreen-printing li::before {
+        background: #1BC6E0; /* or whatever color you prefer */
+    }
+
+
+.col-souvenir-products {
+    vertical-align: top;
+    width: 19%;
+    text-align: left;
+}
+
+    .col-souvenir-products li::before {
+        background: #70C62F; /* or whatever color you prefer */
+    }
+
+
+
+.col-before-post-printing {
+    vertical-align: top;
+    width: 19%;
+    text-align: left;
+}
+
+    .col-before-post-printing li::before {
+        background: #3e54c3; /* or whatever color you prefer */
+    }
+
+
+    .col-digital-printing ul,
+    .col-offset-printing ul,
+    .col-widescreen-printing ul,
+    .col-souvenir-products ul,
+    .col-before-post-printing ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .col-digital-printing li,
+    .col-offset-printing li,
+    .col-widescreen-printing li,
+    .col-souvenir-products li,
+    .col-before-post-printing li {
+        padding-left: 1em;
+        text-indent: -.7em;
+    }
+
+        .col-digital-printing li::before,
+        .col-offset-printing li::before,
+        .col-widescreen-printing li::before,
+        .col-souvenir-products li::before,
+        .col-before-post-printing li::before {
+            content: " ";
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            margin-right: 3px;
+            vertical-align: baseline;
+            border-radius: 4px;
+        }
