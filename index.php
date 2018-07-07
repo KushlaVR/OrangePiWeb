@@ -3,7 +3,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>Pi Extantion Board explain priject</title>
+    <title>Плата розширення Pi Extantion Board explain priject</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/bootstrap.css" type="text/css">
     <script src="./js/jquery-3.0.0.js"></script>
