@@ -1,13 +1,7 @@
-﻿<!DOCTYPE html>
-<?php // @codingStandardsIgnoreFile
+<!DOCTYPE html>
+<?php
 
-// check PHP platform requirements
-if (!extension_loaded('dom')) {
-    die('Pico requires the PHP extension "dom" to run');
-}
-if (!extension_loaded('mbstring')) {
-    die('Pico requires the PHP extension "mbstring" to run');
-}
+
 
 ?>
 
@@ -50,7 +44,7 @@ if (!extension_loaded('mbstring')) {
 
 	<div class="container-fluid bg-1 text-center">
 		<h3>Хто я?</h3>
-		<img src="./img/my.jpg" class="img-circle" alt="Bird" width="350" height="350" />
+		<img src="./img/my.jpg" class="img-circle" alt="Bird" width="300" height="300" />
 		<h3>Я є розробник</h3>
 	</div>
 

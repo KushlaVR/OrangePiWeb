@@ -4,10 +4,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.27130.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "root", "root", "{7BE4610A-7720-429F-830D-8554DF3C638B}"
-	ProjectSection(SolutionItems) = preProject
-		index.html = index.html
-		index.php = index.php
-	EndProjectSection
 EndProject
 Project("{A0786B88-2ADB-4C21-ABE8-AA2D79766269}") = "Board", "Board\Board.phpproj", "{1516B129-EC6C-4570-8448-FD72DAA389ED}"
 EndProject
