@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <?php
 
+echo urldecode($_GET["update"]);
 
-
+return;
 ?>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
