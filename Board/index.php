@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <?php
 
-echo urldecode($_GET["update"]);
+$values = urldecode($_GET["update"]);
+
+echo $values;
+
+var_dump(json_decode($values));
+var_dump(json_decode($values, true));
 
 return;
 ?>
