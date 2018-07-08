@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Workspace Name="GPIOsrv" Database="">
-  <Project Name="gpio-server" Path="gpio-server/gpio-server.project" Active="Yes"/>
-  <Project Name="gpio-client" Path="../gpio-client/gpio-client.project" Active="No"/>
+  <Project Name="gpio-server" Path="gpio-server/gpio-server.project" Active="No"/>
+  <Project Name="gpio-client" Path="../gpio-client/gpio-client.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>

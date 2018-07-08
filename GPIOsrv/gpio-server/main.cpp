@@ -5,7 +5,13 @@
 #include <stdlib.h>
 #include <netinet/in.h>
 #include <string.h>
+#include <wiringPi.h>
+#include <Board.h>
+
 #define PORT 8001
+
+
+Board * board;
 
 
 char *hello = "OK";
@@ -20,7 +26,11 @@ void handle();
 int main(int argc, char const **argv)
 {
     
-    printf("GPIO server started\n");
+	printf("GPIO server started\n");
+	
+	board = new Board(0x25, 0x27);
+	
+    printf("Board initialized\n");
   
     int opt = 1;
     
@@ -72,12 +82,13 @@ void handle(){
 		if ((new_socket = accept(server_fd, (struct sockaddr *)&address, (socklen_t*)&addrlen))<0)
 		{
 			perror("accept");
-        	exit(EXIT_FAILURE);
-    	}
+			exit(EXIT_FAILURE);
+		}
 		printf("New socket\n");
-    	valread = read( new_socket , buffer, 1024);
-    	printf("%s\n",buffer );
-    	send(new_socket , hello , strlen(hello) , 0 );
-    	printf("OK sent\n");
+		valread = read( new_socket , buffer, 1024);
+		//printf("%s\n",buffer );
+		board->handle(buffer);
+		send(new_socket , hello , strlen(hello) , 0 );
+		printf("OK sent\n");
 	}
 }
