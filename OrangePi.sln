@@ -7,14 +7,40 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "root", "root", "{7BE4610A-7
 EndProject
 Project("{A0786B88-2ADB-4C21-ABE8-AA2D79766269}") = "Board", "Board\Board.phpproj", "{1516B129-EC6C-4570-8448-FD72DAA389ED}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GPIO", "GPIO\GPIO.vcxproj", "{5D0F0945-ED5F-49D9-8A94-B25F19481FE8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{1516B129-EC6C-4570-8448-FD72DAA389ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1516B129-EC6C-4570-8448-FD72DAA389ED}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{1516B129-EC6C-4570-8448-FD72DAA389ED}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1516B129-EC6C-4570-8448-FD72DAA389ED}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{1516B129-EC6C-4570-8448-FD72DAA389ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1516B129-EC6C-4570-8448-FD72DAA389ED}.Release|ARM.ActiveCfg = Release|Any CPU
+		{1516B129-EC6C-4570-8448-FD72DAA389ED}.Release|x64.ActiveCfg = Release|Any CPU
+		{1516B129-EC6C-4570-8448-FD72DAA389ED}.Release|x86.ActiveCfg = Release|Any CPU
+		{5D0F0945-ED5F-49D9-8A94-B25F19481FE8}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{5D0F0945-ED5F-49D9-8A94-B25F19481FE8}.Debug|ARM.ActiveCfg = Debug|Win32
+		{5D0F0945-ED5F-49D9-8A94-B25F19481FE8}.Debug|x64.ActiveCfg = Debug|x64
+		{5D0F0945-ED5F-49D9-8A94-B25F19481FE8}.Debug|x64.Build.0 = Debug|x64
+		{5D0F0945-ED5F-49D9-8A94-B25F19481FE8}.Debug|x86.ActiveCfg = Debug|Win32
+		{5D0F0945-ED5F-49D9-8A94-B25F19481FE8}.Debug|x86.Build.0 = Debug|Win32
+		{5D0F0945-ED5F-49D9-8A94-B25F19481FE8}.Release|Any CPU.ActiveCfg = Release|Win32
+		{5D0F0945-ED5F-49D9-8A94-B25F19481FE8}.Release|ARM.ActiveCfg = Release|Win32
+		{5D0F0945-ED5F-49D9-8A94-B25F19481FE8}.Release|x64.ActiveCfg = Release|x64
+		{5D0F0945-ED5F-49D9-8A94-B25F19481FE8}.Release|x64.Build.0 = Release|x64
+		{5D0F0945-ED5F-49D9-8A94-B25F19481FE8}.Release|x86.ActiveCfg = Release|Win32
+		{5D0F0945-ED5F-49D9-8A94-B25F19481FE8}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
