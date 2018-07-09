@@ -3,6 +3,24 @@
 
 
 
+unsigned char String::startsWith( const String &s2 ) const
+{
+	if (len < s2.len) return 0;
+	return startsWith(s2, 0);
+}
+
+unsigned char String::startsWith( const String &s2, unsigned int offset ) const
+{
+	if (offset > len - s2.len || !buffer || !s2.buffer) return 0;
+	return strncmp( &buffer[offset], s2.buffer, s2.len ) == 0;
+}
+
+unsigned char String::endsWith( const String &s2 ) const
+{
+	if ( len < s2.len || !buffer || !s2.buffer) return 0;
+	return strcmp(&buffer[len - s2.len], s2.buffer) == 0;
+}
+
 
 JsonString::JsonString(char * cstr) :String(cstr) {}
 JsonString::JsonString(String &str) :String(str) {}
