@@ -29,6 +29,9 @@ public:
     int indexOf(char ch, unsigned int fromIndex ) const;
     int indexOf(const String &s2) const;
     int indexOf(const String &s2, unsigned int fromIndex) const;
+    String substring(unsigned int left, unsigned int right) const;
+	
+	
     String& operator=(const String&);
     friend String operator+(const String&, const String&);
     String& operator+=(const String&);
@@ -115,6 +118,23 @@ int String::indexOf(const String &s2, unsigned int fromIndex) const
 	const char *found = strstr(str + fromIndex, s2.str);
 	if (found == NULL) return -1;
 	return found - str;
+}
+
+String String::substring(unsigned int left, unsigned int right) const
+{
+	if (left > right) {
+		unsigned int temp = right;
+		right = left;
+		left = temp;
+	}
+	String out;
+	if (left >= len) return out;
+	if (right > len) right = len;
+	char temp = buffer[right];  // save the replaced character
+	buffer[right] = '\0';	
+	out = buffer + left;  // pointer arithmetic
+	buffer[right] = temp;  //restore character
+	return out;
 }
 
 // ---
