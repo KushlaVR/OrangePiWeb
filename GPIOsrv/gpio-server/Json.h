@@ -24,7 +24,11 @@ public:
     unsigned char startsWith( const String &s2 ) const;
     unsigned char startsWith( const String &s2, unsigned int offset ) const;
     unsigned char endsWith( const String &s2 ) const;
-	
+
+    int String::indexOf(char c) const;
+    int String::indexOf( char ch, unsigned int fromIndex ) const;
+    int String::indexOf(const String &s2) const;
+    int String::indexOf(const String &s2, unsigned int fromIndex) const;
     String& operator=(const String&);
     friend String operator+(const String&, const String&);
     String& operator+=(const String&);
@@ -84,6 +88,33 @@ unsigned char String::endsWith( const String &s2 ) const
 {
 	if ( StrLen(str) < StrLen(s2.str) || !str || !s2.str) return 0;
 	return strcmp(&str[StrLen(str) - StrLen(s2.str)], s2.str) == 0;
+}
+
+	
+int String::indexOf(char c) const
+{
+	return indexOf(c, 0);
+}
+
+int String::indexOf( char ch, unsigned int fromIndex ) const
+{
+	if (fromIndex >= len) return -1;
+	const char* temp = strchr(buffer + fromIndex, ch);
+	if (temp == NULL) return -1;
+	return temp - buffer;
+}
+
+int String::indexOf(const String &s2) const
+{
+	return indexOf(s2, 0);
+}
+
+int String::indexOf(const String &s2, unsigned int fromIndex) const
+{
+	if (fromIndex >= len) return -1;
+	const char *found = strstr(buffer + fromIndex, s2.buffer);
+	if (found == NULL) return -1;
+	return found - buffer;
 }
 
 // ---
