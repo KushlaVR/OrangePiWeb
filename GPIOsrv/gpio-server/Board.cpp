@@ -52,7 +52,7 @@ void Board::demo(){
 }
 
 void Board::handle(char * buffer){
-	String str = String(buffer);
+	STD::String str = STD::String(buffer);
 	JsonString s = JsonString(str);
 	printf(buffer);
 }
