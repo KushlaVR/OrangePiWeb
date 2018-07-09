@@ -2,7 +2,7 @@
 #include <wiringPi.h>
 #include <wiringPiI2C.h>
 #include <Board.h>
-
+#include "Json.h"
 
 Board::Board(const int dev1Id = 0x25, const int dev2Id = 0x27)
 {
@@ -52,5 +52,7 @@ void Board::demo(){
 }
 
 void Board::handle(char * buffer){
+	String str = String(buffer);
+	JsonString s = JsonString(str);
 	printf(buffer);
 }

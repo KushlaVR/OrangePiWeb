@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=root
-Date                   :=07/08/18
+Date                   :=07/09/18
 CodeLitePath           :="/root/.codelite"
 LinkerName             :=/usr/bin/g++
 SharedObjectLinkerName :=/usr/bin/g++ -shared -fPIC
@@ -60,7 +60,7 @@ AS       := /usr/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=/usr/share/codelite
-Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/Board.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/Board.cpp$(ObjectSuffix) $(IntermediateDirectory)/Json.cpp$(ObjectSuffix) 
 
 
 
@@ -106,6 +106,14 @@ $(IntermediateDirectory)/Board.cpp$(DependSuffix): Board.cpp
 
 $(IntermediateDirectory)/Board.cpp$(PreprocessSuffix): Board.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Board.cpp$(PreprocessSuffix) "Board.cpp"
+
+$(IntermediateDirectory)/Json.cpp$(ObjectSuffix): Json.cpp $(IntermediateDirectory)/Json.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/var/www/OrangePiWeb/GPIOsrv/gpio-server/Json.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Json.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Json.cpp$(DependSuffix): Json.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Json.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Json.cpp$(DependSuffix) -MM "Json.cpp"
+
+$(IntermediateDirectory)/Json.cpp$(PreprocessSuffix): Json.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Json.cpp$(PreprocessSuffix) "Json.cpp"
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

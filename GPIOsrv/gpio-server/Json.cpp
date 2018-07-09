@@ -1,8 +1,11 @@
 #include "Json.h"
-#include "IdsDebug.h"
 
-JsonString::JsonString(const char * cstr) :String(cstr) {}
-JsonString::JsonString(const String &str) :String(str) {}
+
+
+
+
+JsonString::JsonString(char * cstr) :String(cstr) {}
+JsonString::JsonString(String &str) :String(str) {}
 
 void JsonString::appendComa() {
 	if (endsWith("\"") || endsWith("}") || endsWith("]")) *this += ",";
@@ -38,7 +41,7 @@ void JsonString::endArray()
 	*this += "]";
 }
 
-String JsonString::getValue(char * key)
+STD::String JsonString::getValue(char * key)
 {
 	int p = indexOf(key);
 	if (p > 0) {
