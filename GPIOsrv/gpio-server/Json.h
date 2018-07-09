@@ -2,6 +2,8 @@
 #define STRING_H
  
 #include <iostream>
+#include <stdio.h>
+#include <string.h>
 
 namespace STD
 {
@@ -19,8 +21,9 @@ public:
     ~String();
 	
 	int size();
-	bool endsWith(const String& suffix);
-	bool startsWith(const String& prefix);
+    unsigned char startsWith( const String &s2 ) const;
+    unsigned char startsWith( const String &s2, unsigned int offset ) const;
+    unsigned char endsWith( const String &s2 ) const;
 	
     String& operator=(const String&);
     friend String operator+(const String&, const String&);
@@ -65,16 +68,22 @@ int String::size(){
 	return StrLen(str);
 }
 
-
-bool String::endsWith(const STD::String& suffix)
+unsigned char String::startsWith( const String &s2 ) const
 {
-
-    return false;//str.size() >= suffix.size() && 0 == str.compare(str.size()-suffix.size(), suffix.size(), suffix);
+	if (StrLen(str) < StrLen(s2.str)) return 0;
+	return startsWith(s2, 0);
 }
 
-bool String::startsWith(const STD::String& prefix)
+unsigned char String::startsWith( const String &s2, unsigned int offset ) const
 {
-    return false;//str.size() >= prefix.size() && 0 == str.compare(0, prefix.size(), prefix);
+	if (offset > StrLen(str) - StrLen(s2.str) || !str || !s2.str) return 0;
+	return strncmp( &str[offset], s2.str, StrLen(s2.str) ) == 0;
+}
+
+unsigned char String::endsWith( const String &s2 ) const
+{
+	if ( StrLen(str) < StrLen(s2.str) || !str || !s2.str) return 0;
+	return strcmp(&str[StrLen(str) - StrLen(s2.str)], s2.str) == 0;
 }
 
 // ---
