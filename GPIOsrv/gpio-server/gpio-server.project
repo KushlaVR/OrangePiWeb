@@ -8,6 +8,7 @@
     <File Name="Board.cpp"/>
     <File Name="Json.cpp"/>
     <File Name="Json.h"/>
+    <File Name="String.cpp"/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>
@@ -97,4 +98,6 @@
       </Completion>
     </Configuration>
   </Settings>
+  <Dependencies Name="Debug"/>
+  <Dependencies Name="Release"/>
 </CodeLite_Project>

@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <wiringPi.h>
 #include <wiringPiI2C.h>
-#include <Board.h>
+#include "Board.h"
 #include "Json.h"
 
-Board::Board(const int dev1Id = 0x25, const int dev2Id = 0x27)
+Board::Board(const int dev1Id, const int dev2Id)
 {
 	int ret;
     wiringPiSetup();
@@ -54,5 +54,8 @@ void Board::demo(){
 void Board::handle(char * buffer){
 	STD::String str = STD::String(buffer);
 	JsonString s = JsonString(str);
+	printf("cmd = ");
+	printf(s.getValue("cmd").str);
+	printf("\n");
 	printf(buffer);
 }
