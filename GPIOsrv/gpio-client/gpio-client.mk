@@ -36,7 +36,7 @@ ObjectsFileList        :="gpio-client.txt"
 PCHCompileFlags        :=
 MakeDirCommand         :=mkdir -p
 LinkOptions            :=  
-IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch). 
+IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch). $(IncludeSwitch)../gpio-server 
 IncludePCH             := 
 RcIncludePath          := 
 Libs                   := 
@@ -60,7 +60,7 @@ AS       := /usr/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=/usr/share/codelite
-Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/jsonProcessor.cpp$(ObjectSuffix) 
 
 
 
@@ -98,6 +98,14 @@ $(IntermediateDirectory)/main.cpp$(DependSuffix): main.cpp
 
 $(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) "main.cpp"
+
+$(IntermediateDirectory)/jsonProcessor.cpp$(ObjectSuffix): jsonProcessor.cpp $(IntermediateDirectory)/jsonProcessor.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/var/www/OrangePiWeb/GPIOsrv/gpio-client/jsonProcessor.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/jsonProcessor.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/jsonProcessor.cpp$(DependSuffix): jsonProcessor.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/jsonProcessor.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/jsonProcessor.cpp$(DependSuffix) -MM "jsonProcessor.cpp"
+
+$(IntermediateDirectory)/jsonProcessor.cpp$(PreprocessSuffix): jsonProcessor.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/jsonProcessor.cpp$(PreprocessSuffix) "jsonProcessor.cpp"
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

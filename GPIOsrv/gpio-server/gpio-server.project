@@ -6,9 +6,8 @@
     <File Name="main.cpp"/>
     <File Name="Board.h"/>
     <File Name="Board.cpp"/>
-    <File Name="Json.cpp"/>
-    <File Name="Json.h"/>
-    <File Name="String.cpp"/>
+    <File Name="jsonProcessor.h"/>
+    <File Name="jsonProcessor.cpp"/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>

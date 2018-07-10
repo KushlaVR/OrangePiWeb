@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <wiringPi.h>
 #include <wiringPiI2C.h>
+#include "jsonProcessor.h"
 #include "Board.h"
-#include "Json.h"
 
 Board::Board(const int dev1Id, const int dev2Id)
 {
@@ -52,10 +52,48 @@ void Board::demo(){
 }
 
 void Board::handle(char * buffer){
-	STD::String str = STD::String(buffer);
-	JsonString s = JsonString(str);
+	//std::string str = buffer;
+	JSonProcessor s = JSonProcessor(buffer);
 	printf("cmd = ");
-	printf(s.getValue("cmd").str);
+	std::string cmd = s.getValue("cmd");
+	printf(cmd.c_str());
 	printf("\n");
-	printf(buffer);
+	//printf(buffer);
+	if (cmd.find("set")==0){
+		std::string v; 
+		v = s.getValue("p1");
+		write(0, (v.find("1")==0));
+		v = s.getValue("p2");
+		write(1, (v.find("1")==0));
+		v = s.getValue("p3");
+		write(2, (v.find("1")==0));
+		v = s.getValue("p4");
+		write(3, (v.find("1")==0));
+		v = s.getValue("p5");
+		write(4, (v.find("1")==0));
+		v = s.getValue("p6");
+		write(5, (v.find("1")==0));
+		v = s.getValue("p7");
+		write(6, (v.find("1")==0));
+		v = s.getValue("p8");
+		write(7, (v.find("1")==0));
+		v = s.getValue("p9");
+		write(8, (v.find("1")==0));
+		v = s.getValue("p10");
+		write(9, (v.find("1")==0));
+		v = s.getValue("p11");
+		write(10, (v.find("1")==0));
+		v = s.getValue("p12");
+		write(11, (v.find("1")==0));
+		v = s.getValue("p13");
+		write(12, (v.find("1")==0));
+		v = s.getValue("p14");
+		write(13, (v.find("1")==0));
+		v = s.getValue("p15");
+		write(14, (v.find("1")==0));
+		v = s.getValue("p16");
+		write(15, (v.find("1")==0));
+		
+		printf("white = %d; yellow = %d\n", val_white, val_yellow);
+	}
 }

@@ -60,7 +60,7 @@ AS       := /usr/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=/usr/share/codelite
-Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/Board.cpp$(ObjectSuffix) $(IntermediateDirectory)/Json.cpp$(ObjectSuffix) $(IntermediateDirectory)/String.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/Board.cpp$(ObjectSuffix) $(IntermediateDirectory)/jsonProcessor.cpp$(ObjectSuffix) 
 
 
 
@@ -107,21 +107,13 @@ $(IntermediateDirectory)/Board.cpp$(DependSuffix): Board.cpp
 $(IntermediateDirectory)/Board.cpp$(PreprocessSuffix): Board.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Board.cpp$(PreprocessSuffix) "Board.cpp"
 
-$(IntermediateDirectory)/Json.cpp$(ObjectSuffix): Json.cpp $(IntermediateDirectory)/Json.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/var/www/OrangePiWeb/GPIOsrv/gpio-server/Json.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Json.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/Json.cpp$(DependSuffix): Json.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Json.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Json.cpp$(DependSuffix) -MM "Json.cpp"
+$(IntermediateDirectory)/jsonProcessor.cpp$(ObjectSuffix): jsonProcessor.cpp $(IntermediateDirectory)/jsonProcessor.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/var/www/OrangePiWeb/GPIOsrv/gpio-server/jsonProcessor.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/jsonProcessor.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/jsonProcessor.cpp$(DependSuffix): jsonProcessor.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/jsonProcessor.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/jsonProcessor.cpp$(DependSuffix) -MM "jsonProcessor.cpp"
 
-$(IntermediateDirectory)/Json.cpp$(PreprocessSuffix): Json.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Json.cpp$(PreprocessSuffix) "Json.cpp"
-
-$(IntermediateDirectory)/String.cpp$(ObjectSuffix): String.cpp $(IntermediateDirectory)/String.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/var/www/OrangePiWeb/GPIOsrv/gpio-server/String.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/String.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/String.cpp$(DependSuffix): String.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/String.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/String.cpp$(DependSuffix) -MM "String.cpp"
-
-$(IntermediateDirectory)/String.cpp$(PreprocessSuffix): String.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/String.cpp$(PreprocessSuffix) "String.cpp"
+$(IntermediateDirectory)/jsonProcessor.cpp$(PreprocessSuffix): jsonProcessor.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/jsonProcessor.cpp$(PreprocessSuffix) "jsonProcessor.cpp"
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

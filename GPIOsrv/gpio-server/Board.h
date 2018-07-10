@@ -6,7 +6,7 @@ class Board
 {
 private:
 	int fd_white, fd_yellow;
-	char val_white, val_yellow;
+	char val_white = 0xFF, val_yellow = 0xFF;
 public:
 	Board(const int dev1Id, const int dev2Id);
 	void write(int port, bool value);

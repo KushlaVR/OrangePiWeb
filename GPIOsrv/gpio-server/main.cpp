@@ -7,6 +7,7 @@
 #include <string.h>
 #include <wiringPi.h>
 #include <Board.h>
+#include <jsonProcessor.h>
 
 #define PORT 8001
 
@@ -21,11 +22,11 @@ int addrlen = sizeof(address);
 char buffer[1024] = {0};
 
 void handle();
-
+void test();
 
 int main(int argc, char const **argv)
 {
-    
+    test();
 	printf("GPIO server started\n");
 	
 	board = new Board(0x25, 0x27);
@@ -72,6 +73,24 @@ int main(int argc, char const **argv)
 	printf("Listen star\n");
 	handle();
     return 0;
+}
+
+void test(){
+	//std::string str = "{\"cmd\":\"demo\"}";
+	//printf(str.c_str());
+	//printf("\n");
+	
+	//JSonProcessor s = JSonProcessor(str.c_str());
+	
+	//printf("indexOf = ");
+	//printf("%d",s.indexOf("cmd"));
+	//printf("\n");
+	
+	
+	//printf("cmd = ");
+	//printf(s.getValue("cmd").c_str());
+	//printf("\n");
+	//printf(buffer);
 }
 
 

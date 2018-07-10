@@ -1,11 +1,14 @@
 // Client side C/C++ program to demonstrate Socket programming
 #include <unistd.h>
 #include <stdio.h>
+#include <iostream>
+#include <string>
 #include <sys/socket.h>
 #include <stdlib.h>
 #include <netinet/in.h>
 #include <string.h>
 #include <arpa/inet.h>
+#include "jsonProcessor.h"
 
 #define PORT 8001
 
@@ -14,14 +17,13 @@ int main(int argc, char const *argv[])
     struct sockaddr_in address;
     int sock = 0, valread;
     struct sockaddr_in serv_addr;
-    char *cmd = "{\"cmd\": \"demo\"}\n";
+	
     char buffer[1024] = {0};
-
-  
-    memset(&serv_addr, '0', sizeof(serv_addr));
-  
-    serv_addr.sin_family = AF_INET;
-    serv_addr.sin_port = htons(PORT);
+	
+	memset(&serv_addr, '0', sizeof(serv_addr));
+	
+	serv_addr.sin_family = AF_INET;
+	serv_addr.sin_port = htons(PORT);
       
 
 	printf("\nPress Enter... \n");
@@ -45,8 +47,32 @@ int main(int argc, char const *argv[])
             printf("\nConnection Failed \n");
             //return -1;
         } else {
-		    send(sock, cmd, strlen(cmd), 0);
-		    printf(cmd);
+			
+			JSonProcessor cmd = JSonProcessor("");
+			cmd.beginObject();
+			cmd.AddValue("cmd","set");
+			cmd.AddValue("p1", i==1?"1":"0");
+			cmd.AddValue("p2", i==2?"1":"0");
+			cmd.AddValue("p3", i==3?"1":"0");
+			cmd.AddValue("p4", i==4?"1":"0");
+			cmd.AddValue("p5", i==5?"1":"0");
+			cmd.AddValue("p6", i==6?"1":"0");
+			cmd.AddValue("p7", i==7?"1":"0");
+			cmd.AddValue("p8", i==8?"1":"0");
+	
+			cmd.AddValue("p9", i==9?"1":"0");
+			cmd.AddValue("p10", i==10?"1":"0");
+			cmd.AddValue("p11", i==11?"1":"0");
+			cmd.AddValue("p12", i==12?"1":"0");
+			cmd.AddValue("p13", i==13?"1":"0");
+			cmd.AddValue("p14", i==14?"1":"0");
+			cmd.AddValue("p15", i==15?"1":"0");
+			cmd.AddValue("p16", i==16?"1":"0");
+			cmd.endObject();
+			if (i>=16) i = 0;
+			
+		    send(sock, (cmd.str + "\n\0").c_str(), cmd.str.length()+2, 0);
+		    printf(cmd.str.c_str());
 		    valread = read(sock , buffer, 1024);
 		    printf("%s\n",buffer);
 		}
