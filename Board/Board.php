@@ -78,6 +78,9 @@ class Board
     }
 
     function set(){
+        
+        echo phpinfo();
+
         echo "start est();";
 
         $buff=json_encode(new cmdValue($this->cmd), JSON_PRETTY_PRINT);
