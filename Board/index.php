@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-$values = urldecode($_GET["cmd"]);
+/*$values = urldecode($_GET["cmd"]);
 
 var_dump(json_decode($values));
 var_dump(json_decode($values, true));
@@ -10,7 +10,7 @@ if ($board->isCommand($values)){
     var_dump($board);
     //$board.gpio_exec();
 }
-/*
+
 $values = urldecode($_GET["update"]);
 
 echo $values;
