@@ -95,6 +95,7 @@ class Board
 
             $length = strlen($buff);
             $sent = socket_write($socket, $buff, $length);
+            echo "2;";
             if ( FALSE===$sent ) {
                 $errno = socket_last_error($socket);
                 $error = sprintf('%s (%d)', socket_strerror($errno), $errno);
@@ -104,6 +105,7 @@ class Board
                 $msg = sprintf('only %d of %d bytes sent', $length, $sent);
                 trigger_error($msg, E_USER_NOTICE);
             }
+            echo "OK;";
         }
         catch (Exception $e) {
             echo 'Виникла помилка: ',  $e->getMessage(), "\n";

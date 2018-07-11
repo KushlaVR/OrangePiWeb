@@ -79,10 +79,6 @@
                 __autoload('Board');
 
                 try {
-
-                    $socket=socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
-                    var_dump($socket);
-
                     $values = urldecode($_GET["cmd"]);
                     if ($values!=NULL){
                         $board = new Board;
