@@ -15,7 +15,7 @@ public:
 	void endObject();
 	void beginArray(std::string arrayName);
 	void endArray();
-	std::string getValue(char* key);
+	std::string getValue(const char* key);
 	std::string substring(int startIndex, int endIndex);
 	int indexOf(char* key);
 	int indexOf(char* key, int pos);

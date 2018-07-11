@@ -8,6 +8,7 @@
     <File Name="Board.cpp"/>
     <File Name="jsonProcessor.h"/>
     <File Name="jsonProcessor.cpp"/>
+    <File Name="ToString.h"/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>

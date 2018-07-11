@@ -40,7 +40,7 @@ void JSonProcessor::endArray()
 	str += "]";
 }
 
-std::string JSonProcessor::getValue(char * key)
+std::string JSonProcessor::getValue(const char * key)
 {
 	int p = indexOf(key);
 	if (p > 0) {

@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <wiringPi.h>
 #include <wiringPiI2C.h>
+#include "ToString.h"
 #include "jsonProcessor.h"
 #include "Board.h"
 
@@ -60,7 +61,17 @@ void Board::handle(char * buffer){
 	printf("\n");
 	//printf(buffer);
 	if (cmd.find("set")==0){
-		std::string v; 
+		std::string v;
+		for (int pin = 1; pin <= 16; pin++){
+			std::string key = "p" + patch::to_string(pin);
+			v = s.getValue(const_cast<const char*>(key.c_str()));
+			if (v.length()==1){
+				write(pin, (v.find("1")==0));
+			};
+			//printf("key = %s; v = %s;", key.c_str(), v.c_str());
+			
+		}
+		/*
 		v = s.getValue("p1");
 		write(0, (v.find("1")==0));
 		v = s.getValue("p2");
@@ -92,7 +103,7 @@ void Board::handle(char * buffer){
 		v = s.getValue("p15");
 		write(14, (v.find("1")==0));
 		v = s.getValue("p16");
-		write(15, (v.find("1")==0));
+		write(15, (v.find("1")==0));*/
 		
 		printf("white = %d; yellow = %d\n", val_white, val_yellow);
 	}

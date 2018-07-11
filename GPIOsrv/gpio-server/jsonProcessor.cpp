@@ -40,7 +40,7 @@ void JSonProcessor::endArray()
 	str += "]";
 }
 
-std::string JSonProcessor::getValue(char * key)
+std::string JSonProcessor::getValue(const char * key)
 {
 	int p = indexOf(key);
 	if (p > 0) {
@@ -68,12 +68,12 @@ std::string JSonProcessor::substring(int startIndex, int endIndex)
 	return str.substr(startIndex, endIndex - startIndex);
 }
 
-int JSonProcessor::indexOf(char* key)
+int JSonProcessor::indexOf(const char* key)
 {
 	return str.find(key);
 }
 
-int JSonProcessor::indexOf(char* key, int pos)
+int JSonProcessor::indexOf(const char* key, int pos)
 {
 	return str.find(key, pos);
 }

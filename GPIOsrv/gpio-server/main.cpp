@@ -108,7 +108,8 @@ void handle(){
 		//printf("%s\n",buffer );
 		board->handle(buffer);
 		send(new_socket , hello , strlen(hello) , 0 );
-		close(new_socket);
+		int ret = close(new_socket);
+		printf("close result = %d\n", ret);
 		printf("OK sent\n");
 	}
 }
