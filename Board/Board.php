@@ -25,7 +25,7 @@ class Board
     }
 
     function gpio_exec(){
-        if ($this->{$this->cmd->cmd}!=NULL) {
+        if ($this->cmd->cmd=="set") {
             $this->set();
         } else 
             echo "Команда [" . $this->cmd->cmd . "] не визначена!";
