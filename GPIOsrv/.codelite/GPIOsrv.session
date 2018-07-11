@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Session Name="/var/www/OrangePiWeb/GPIOsrv/GPIOsrv.workspace">
-  <int Value="5" Name="m_selectedTab"/>
+  <int Value="3" Name="m_selectedTab"/>
   <wxString Value="/var/www/OrangePiWeb/GPIOsrv/GPIOsrv.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
-    <TabInfo>
-      <wxString Value="/var/www/OrangePiWeb/gpio-client/main.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="20" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
     <TabInfo>
       <wxString Value="/var/www/OrangePiWeb/GPIOsrv/gpio-server/Board.h" Name="FileName"/>
       <int Value="0" Name="FirstVisibleLine"/>
@@ -19,43 +12,22 @@
     </TabInfo>
     <TabInfo>
       <wxString Value="/var/www/OrangePiWeb/GPIOsrv/gpio-server/Board.cpp" Name="FileName"/>
-      <int Value="35" Name="FirstVisibleLine"/>
-      <int Value="59" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
-      <wxString Value="/var/www/OrangePiWeb/GPIOsrv/gpio-server/Json.cpp" Name="FileName"/>
-      <int Value="24" Name="FirstVisibleLine"/>
-      <int Value="42" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
-      <wxString Value="/var/www/OrangePiWeb/GPIOsrv/gpio-server/Json.h" Name="FileName"/>
       <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="2" Name="CurrentLine"/>
+      <int Value="58" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="/var/www/OrangePiWeb/GPIOsrv/gpio-client/main.cpp" Name="FileName"/>
-      <int Value="24" Name="FirstVisibleLine"/>
+      <int Value="48" Name="FirstVisibleLine"/>
       <int Value="46" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
-      <wxString Value="/var/www/OrangePiWeb/GPIOsrv/gpio-server/String.h" Name="FileName"/>
-      <int Value="18" Name="FirstVisibleLine"/>
-      <int Value="9" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
-      <wxString Value="/var/www/OrangePiWeb/GPIOsrv/gpio-server/String.cpp" Name="FileName"/>
+      <wxString Value="/var/www/OrangePiWeb/GPIOsrv/gpio-server/main.cpp" Name="FileName"/>
       <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="209" Name="CurrentLine"/>
+      <int Value="1" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
