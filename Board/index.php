@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <?php
+function __autoload($class_name) {
+    require_once $class_name . '.php';
+}
+
+__autoload('Board');
+
 $values = urldecode($_GET["cmd"]);
 
 var_dump(json_decode($values));
