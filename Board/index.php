@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <?php
-/*$values = urldecode($_GET["cmd"]);
+$values = urldecode($_GET["cmd"]);
 
 var_dump(json_decode($values));
 var_dump(json_decode($values, true));
-
+/*
 $board = new Board();
 if ($board->isCommand($values)){
     var_dump($board);
