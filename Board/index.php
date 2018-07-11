@@ -7,15 +7,18 @@ function __autoload($class_name) {
 __autoload('Board');
 
 $values = urldecode($_GET["cmd"]);
+if ($values!=NULL){
+    $board = new Board;
+    if ($board->isCommand($values)){
+        var_dump($board);
+        //$board.gpio_exec();
+    }
+    var_dump(json_decode($values));
+    var_dump(json_decode($values, true));
 
-var_dump(json_decode($values));
-var_dump(json_decode($values, true));
 
-$board = new Board;
-/*if ($board->isCommand($values)){
-    var_dump($board);
-    //$board.gpio_exec();
 }
+/*
 
 $values = urldecode($_GET["update"]);
 
