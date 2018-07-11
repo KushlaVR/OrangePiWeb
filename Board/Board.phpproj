@@ -19,8 +19,8 @@
     <Compile Include=".gitattributes" />
     <Compile Include=".gitignore" />
     <Compile Include=".htaccess" />
-    <Compile Include="composer.json" />
     <Compile Include="index.php" />
+    <Compile Include="Board.php" />
     <Compile Include="web.config" />
   </ItemGroup>
   <ItemGroup>
