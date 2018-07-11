@@ -7,7 +7,8 @@ var_dump(json_decode($values, true));
 
 $board = new Board();
 if ($board.isCommand($values)){
-    $board.gpio_exec();
+    var_dump($board);
+    //$board.gpio_exec();
 }
 /*
 $values = urldecode($_GET["update"]);
