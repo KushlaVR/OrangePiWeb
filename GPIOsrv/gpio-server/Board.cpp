@@ -57,16 +57,19 @@ void Board::handle(char * buffer){
 	JSonProcessor s = JSonProcessor(buffer);
 	printf("cmd = ");
 	std::string cmd = s.getValue("cmd");
-	printf(cmd.c_str());
+	printf(buffer);
 	printf("\n");
 	
 	if (cmd.find("set")==0){
+		printf("\n");
+		printf("\n");
+
 		std::string v;
 		for (int pin = 1; pin <= 16; pin++){
 			std::string key = "p" + patch::to_string(pin);
 			v = s.getValue(const_cast<const char*>(key.c_str()));
 			if (v.length()==1){
-				write(pin, (v.find("1")==0));
+				write(pin - 1, (v.find("1")==0));
 			};
 			
 			
