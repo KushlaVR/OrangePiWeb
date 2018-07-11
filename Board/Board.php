@@ -10,16 +10,6 @@
  * @author Віталік
  */
 
-class cmdValue implements JsonSerializable {
-    public function __construct(array $array) {
-        $this->array = $array;
-    }
-
-    public function jsonSerialize() {
-        return $this->array;
-    }
-}
-
 class Board
 {
 
@@ -78,41 +68,47 @@ class Board
     }
 
     function set(){
-        
-        echo phpinfo();
 
-        echo "start est();";
+        //echo phpinfo();
 
-        $buff=json_encode(new cmdValue($this->cmd), JSON_PRETTY_PRINT);
+        echo "start set();";
 
-        var_dump(json_decode($buff));
+        $buff=json_encode(get_object_vars($this->cmd), JSON_PRETTY_PRINT);
 
-        $socket=socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
-        if ( !$socket ) {
-            $errno = socket_last_error();
-            $error = sprintf('%s (%d)', socket_strerror($errno), $errno);
-            trigger_error($error, E_USER_ERROR);
+        var_dump($buff);
+        try{
+
+            $socket=socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
+            if ( !$socket ) {
+                $errno = socket_last_error();
+                $error = sprintf('%s (%d)', socket_strerror($errno), $errno);
+                trigger_error($error, E_USER_ERROR);
+            }
+            echo "1;";
+
+            if ( !socket_connect($socket, '127.0.0.1', 8001) ) {
+                $errno = socket_last_error($socket);
+                $error = sprintf('%s (%d)', socket_strerror($errno), $errno);
+                trigger_error($error, E_USER_ERROR);
+            }
+            echo "2;";
+
+            $length = strlen($buff);
+            $sent = socket_write($socket, $buff, $length);
+            if ( FALSE===$sent ) {
+                $errno = socket_last_error($socket);
+                $error = sprintf('%s (%d)', socket_strerror($errno), $errno);
+                trigger_error($error, E_USER_ERROR);
+            }
+            else if ( $length!==$sent ) {
+                $msg = sprintf('only %d of %d bytes sent', $length, $sent);
+                trigger_error($msg, E_USER_NOTICE);
+            }
         }
-        echo "1;";
+        catch (Exception $e) {
+            echo 'Виникла помилка: ',  $e->getMessage(), "\n";
+        }
 
-        if ( !socket_connect($socket, '127.0.0.1', 8001) ) {
-            $errno = socket_last_error($socket);
-            $error = sprintf('%s (%d)', socket_strerror($errno), $errno);
-            trigger_error($error, E_USER_ERROR);
-        }
-        echo "2;";
-
-        $length = strlen($buff);
-        $sent = socket_write($socket, $buff, $length);
-        if ( FALSE===$sent ) {
-            $errno = socket_last_error($socket);
-            $error = sprintf('%s (%d)', socket_strerror($errno), $errno);
-            trigger_error($error, E_USER_ERROR);
-        }
-        else if ( $length!==$sent ) {
-            $msg = sprintf('only %d of %d bytes sent', $length, $sent);
-            trigger_error($msg, E_USER_NOTICE);
-        }
     }
 }
 

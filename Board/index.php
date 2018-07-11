@@ -78,14 +78,25 @@
 
                 __autoload('Board');
 
-                $values = urldecode($_GET["cmd"]);
-                if ($values!=NULL){
-                    $board = new Board;
-                    if ($board->isCommand($values)){
-                        var_dump($board);
-                        $board->gpio_exec();
+                try {
+
+                    $socket=socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
+                    var_dump($socket);
+
+                    $values = urldecode($_GET["cmd"]);
+                    if ($values!=NULL){
+                        $board = new Board;
+                        if ($board->isCommand($values)){
+                            //var_dump($board);
+                            $board->gpio_exec();
+                        }
                     }
                 }
+                catch (Exception $e) {
+                    echo 'Виникла помилка: ',  $e->getMessage(), "\n";
+                }
+
+
                 ?>
             </div>
         </div>
