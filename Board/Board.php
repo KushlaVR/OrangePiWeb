@@ -78,21 +78,27 @@ class Board
     }
 
     function set(){
+        echo "start est();";
+
+        $buff=json_encode(new cmdValue($this->cmd), JSON_PRETTY_PRINT);
+
+        var_dump(json_decode($buff));
+
         $socket=socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
         if ( !$socket ) {
             $errno = socket_last_error();
             $error = sprintf('%s (%d)', socket_strerror($errno), $errno);
             trigger_error($error, E_USER_ERROR);
         }
-        echo "123";
+        echo "1;";
 
         if ( !socket_connect($socket, '127.0.0.1', 8001) ) {
             $errno = socket_last_error($socket);
             $error = sprintf('%s (%d)', socket_strerror($errno), $errno);
             trigger_error($error, E_USER_ERROR);
         }
+        echo "2;";
 
-        $buff=json_encode(new cmdValue($this->cmd), JSON_PRETTY_PRINT);
         $length = strlen($buff);
         $sent = socket_write($socket, $buff, $length);
         if ( FALSE===$sent ) {
