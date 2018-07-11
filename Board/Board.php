@@ -9,19 +9,29 @@
  * @version 1.0
  * @author Віталік
  */
+
+class cmdValue implements JsonSerializable {
+    public function __construct(array $array) {
+        $this->array = $array;
+    }
+
+    public function jsonSerialize() {
+        return $this->array;
+    }
+}
+
 class Board
 {
 
     public $cmd;
 
     function isCommand($cmd){
-        $this->cmd = $cmd;
-
+        //$this->cmd = $cmd;
         $j = json_decode($cmd);
-
-        var_dump(json_decode($j));
-        var_dump(json_decode($j, true));
-        return false;
+        //var_dump($j);
+        if ($j->cmd == NULL) return false;
+        $this->cmd = $j;
+        return true;
         /*
         $values = urldecode($_GET["update"]);
 
@@ -62,10 +72,39 @@ class Board
         }*/
     }
 
-    function gpio_exec($cmd){
-
+    function gpio_exec(){
+        //if ($this->{$this->cmd->cmd}!=NULL) $this->{$this->cmd->cmd}(); else echo "Команда [" . $this->cmd->cmd . "] не визначена!";
+        $this->set();
     }
 
+    function set(){
+        $socket=socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
+        if ( !$socket ) {
+            $errno = socket_last_error();
+            $error = sprintf('%s (%d)', socket_strerror($errno), $errno);
+            trigger_error($error, E_USER_ERROR);
+        }
+        echo "123";
+
+        if ( !socket_connect($socket, '127.0.0.1', 8001) ) {
+            $errno = socket_last_error($socket);
+            $error = sprintf('%s (%d)', socket_strerror($errno), $errno);
+            trigger_error($error, E_USER_ERROR);
+        }
+
+        $buff=json_encode(new cmdValue($this->cmd), JSON_PRETTY_PRINT);
+        $length = strlen($buff);
+        $sent = socket_write($socket, $buff, $length);
+        if ( FALSE===$sent ) {
+            $errno = socket_last_error($socket);
+            $error = sprintf('%s (%d)', socket_strerror($errno), $errno);
+            trigger_error($error, E_USER_ERROR);
+        }
+        else if ( $length!==$sent ) {
+            $msg = sprintf('only %d of %d bytes sent', $length, $sent);
+            trigger_error($msg, E_USER_NOTICE);
+        }
+    }
 }
 
 
