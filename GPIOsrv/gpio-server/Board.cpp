@@ -61,20 +61,41 @@ void Board::handle(char * buffer){
 	printf("\n");
 	
 	if (cmd.find("set")==0){
-		printf("\n");
-		printf("\n");
-
 		std::string v;
 		for (int pin = 1; pin <= 16; pin++){
 			std::string key = "p" + patch::to_string(pin);
-			v = s.getValue(const_cast<const char*>(key.c_str()));
+			v = s.getValue(key);
 			if (v.length()==1){
 				write(pin - 1, (v.find("1")==0));
 			};
-			
-			
 		}
-		
-		printf("white = %d; yellow = %d\n", val_white, val_yellow);
+		printValues();
+	}//set
+	else if (cmd.find("get")==0){
+		printValues();
 	}
+}
+
+void Board::printValues()
+{
+	//printf("white = %d; yellow = %d\n", val_white, val_yellow);
+	printf("white [");
+	for (int i = 0; i<8; i++){
+		if ((val_white & (1 << i))==0)
+		{
+			printf("*");
+		} else {
+			printf("-");
+		}
+	}
+	printf("]; yellow = [");
+	for (int i = 0; i<8; i++){
+		if ((val_yellow & (1 << i))==0)
+		{
+			printf("*");
+		} else {
+			printf("-");
+		}
+	}
+	printf("]\n");
 }

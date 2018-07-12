@@ -12,4 +12,5 @@ public:
 	void write(int port, bool value);
 	void demo();
 	void handle(char * buffer);
+	void printValues();
 };

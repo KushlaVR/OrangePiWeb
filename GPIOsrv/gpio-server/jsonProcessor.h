@@ -16,6 +16,7 @@ public:
 	void beginArray(std::string arrayName);
 	void endArray();
 	std::string getValue(const char* key);
+	std::string getValue(std::string const &key);
 	std::string substring(int startIndex, int endIndex);
 	int indexOf(const char* key);
 	int indexOf(const char* key, int pos);

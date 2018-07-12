@@ -63,6 +63,11 @@ std::string JSonProcessor::getValue(const char * key)
 	return "";
 }
 
+std::string JSonProcessor::getValue(std::string const &key)
+{
+	return getValue(const_cast<const char*>(key.c_str()));
+}
+
 std::string JSonProcessor::substring(int startIndex, int endIndex)
 {
 	return str.substr(startIndex, endIndex - startIndex);
