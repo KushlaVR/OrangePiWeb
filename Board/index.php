@@ -1,3 +1,29 @@
+<?php 
+    function __autoload($class_name) {
+        require_once $class_name . '.php';
+    }
+    __autoload('Board');
+    
+
+    try {
+        $values = urldecode($_GET["cmd"]);
+        if ($values!=NULL){
+            $board = new Board;
+            if ($board->isCommand($values)){
+                //var_dump($board);
+                $board->gpio_exec();
+            }
+        }
+    }
+    catch (Exception $e) {
+        echo 'Виникла помилка: ',  $e->getMessage(), "\n";
+    }
+
+    $ui = urldecode($_GET["ui"]);
+    if ($ui=="false"){
+        return;
+    }
+?>
 <!DOCTYPE html>
 
 
@@ -70,30 +96,21 @@
                 Керування виходами
             </div>
             <div class="panel-body">
+                <ul>
+                    <li>
+                        <form action="~/index.php">
+                            <input type="hidden" name="ui" value="false" />
+                            <input type="hidden" name="cmd" value='{"cmd":"set","p1":"1"}' />
+                            <button type="submit">1</button>
+                        </form>
+                        <form action="~/index.php">
+                            <input type="hidden" name="ui" value="false" />
+                            <input type="hidden" name="cmd" value='{"cmd":"set","p1":"1"}' />
+                            <button type="submit">0</button>
+                        </form>
+                    </li>
+                </ul>
 
-                <?php
-                function __autoload($class_name) {
-                    require_once $class_name . '.php';
-                }
-
-                __autoload('Board');
-
-                try {
-                    $values = urldecode($_GET["cmd"]);
-                    if ($values!=NULL){
-                        $board = new Board;
-                        if ($board->isCommand($values)){
-                            //var_dump($board);
-                            $board->gpio_exec();
-                        }
-                    }
-                }
-                catch (Exception $e) {
-                    echo 'Виникла помилка: ',  $e->getMessage(), "\n";
-                }
-
-
-                ?>
             </div>
         </div>
     </div>
