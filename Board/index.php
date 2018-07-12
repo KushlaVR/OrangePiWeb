@@ -98,12 +98,12 @@
             <div class="panel-body">
                 <ul>
                     <li>
-                        <form action="~/index.php">
+                        <form action="">
                             <input type="hidden" name="ui" value="false" />
                             <input type="hidden" name="cmd" value='{"cmd":"set","p1":"1"}' />
                             <button type="submit">1</button>
                         </form>
-                        <form action="~/index.php">
+                        <form action="">
                             <input type="hidden" name="ui" value="false" />
                             <input type="hidden" name="cmd" value='{"cmd":"set","p1":"1"}' />
                             <button type="submit">0</button>
