@@ -3,7 +3,7 @@ function onStartup(){
 }
 
 function addHandlers() {
-    $('.addToList').on('click', (function (e) {
+    $('.btn-on, .btn-off').on('click', (function (e) {
           var url = "/";
           var cmd = {};
           cmd["p" + $(this).data('id')] = $(this).data('state')
