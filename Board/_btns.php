@@ -8,5 +8,3 @@ for ($i = 1; $i <= 16; $i++) {
 	include '_btn.php';
 };
 ?>
-
-<button type="button" class="btn btn-success btn-read" data-cmd="get">Refresh</button>

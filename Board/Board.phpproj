@@ -23,6 +23,7 @@
     <Compile Include="index.php" />
     <Compile Include="Board.php" />
     <Compile Include="web.config" />
+    <Compile Include="_board.php" />
     <Compile Include="_btn.php" />
     <Compile Include="_btns.php" />
   </ItemGroup>
