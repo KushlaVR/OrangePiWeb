@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="./css/bootstrap.css" type="text/css" />
     <script src="./js/jquery-3.0.0.js"></script>
     <script src="./js/bootstrap.js"></script>
+    <script src="./js/board.js"></script>
     <style>
         .bg-1 {
             background-color: #1abc9c;
@@ -135,7 +136,9 @@
             </div>
         </div>
     </div>
-
+    <script>
+        $(document).ready(onStartup)
+    </script>
 </body>
 </html>
 
