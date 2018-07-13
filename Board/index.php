@@ -96,6 +96,9 @@
                 Керування виходами
             </div>
             <div class="panel-body">
+                
+                <?php include '_btns.php'; ?>
+                
                 <ul>
                     <li>
                         <form action="">
