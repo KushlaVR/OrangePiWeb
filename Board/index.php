@@ -99,20 +99,6 @@
                 
                 <?php include '_btns.php'; ?>
                 
-                <ul>
-                    <li>
-                        <form action="">
-                            <input type="hidden" name="ui" value="false" />
-                            <input type="hidden" name="cmd" value='{"cmd":"set","p1":"1"}' />
-                            <button type="submit">1</button>
-                        </form>
-                        <form action="">
-                            <input type="hidden" name="ui" value="false" />
-                            <input type="hidden" name="cmd" value='{"cmd":"set","p1":"1"}' />
-                            <button type="submit">0</button>
-                        </form>
-                    </li>
-                </ul>
 
             </div>
         </div>
