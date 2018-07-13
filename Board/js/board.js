@@ -19,6 +19,24 @@ function addHandlers() {
               
           });
      }));
+	 
+	$('.checkbox').change(function(){
+		var val
+		if (this.checked) val = "1"; else val = "0";
+		var url = "/cmd_processor.php";
+        var data = {cmd:$(this).data('cmd'), ["p" + $(this).data('id')] : val };
+        
+        var param = { ui: false, cmd: JSON.stringify(data) };
+        $.ajax({
+              type: "POST",
+              url: url,
+              data: param
+        }).done(function (data) {
+              turnOn(JSON.parse(data));
+        }).fail(function (data) {
+              
+        });
+	});
 	
 	$('.btn-read').on('click', (function (e) {
           var url = "/cmd_processor.php";
@@ -64,8 +82,10 @@ function turnOn(data){
 		var el = $('#' + pin);
 		if (value=="0") {
 			el.removeClass('bg-warning');
+			$('.cb-' + pin).prop('checked', false);
 		} else {
 			el.addClass('bg-warning');
+			$('.cb-' + pin).prop('checked', true);
 		}
 	})
 }

@@ -7,6 +7,7 @@
     <title>Плата розширення Pi Extantion Board explain priject</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="./css/template.css" type="text/css" />
     <script src="./js/jquery-3.0.0.js"></script>
     <script src="./js/bootstrap.js"></script>
     <script src="./js/board.js"></script>

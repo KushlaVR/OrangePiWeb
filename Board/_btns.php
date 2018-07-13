@@ -9,4 +9,4 @@ for ($i = 1; $i <= 16; $i++) {
 };
 ?>
 
-<button type="button" class="btn btn-success btn-read" data-cmd = "get">Read</button>
+<button type="button" class="btn btn-success btn-read" data-cmd = "get">Refresh</button>
