@@ -1,3 +1,7 @@
+function onStartup(){
+    addHandlers();
+}
+
 function addHandlers() {
     $('.addToList').on('click', (function (e) {
           var url = "/";
