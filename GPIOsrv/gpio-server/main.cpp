@@ -29,7 +29,7 @@ int main(int argc, char const **argv)
     test();
 	printf("GPIO server started\n");
 	
-	board = new Board(0x25, 0x27);
+	board = new Board(0x27, 0x25);
 	
     printf("Board initialized\n");
   
