@@ -38,6 +38,7 @@
     <Content Include="img\board-1.jpg" />
     <Content Include="img\board-2.jpg" />
     <Content Include="img\board-3.jpg" />
+    <Content Include="img\led-red.png" />
     <Content Include="img\my.jpg" />
     <Content Include="js\board.js" />
     <Content Include="js\bootstrap.bundle.js" />

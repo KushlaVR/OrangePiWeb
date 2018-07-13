@@ -1,6 +1,6 @@
 
 <div class="row">
-    <div class="col-sm-3">
+    <div class="col-sm-12">
         <div class="input-group">
             <div class="form-control" id="p<?php echo $model->id ?>">
                 <label>

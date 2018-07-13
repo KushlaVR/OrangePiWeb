@@ -82,9 +82,11 @@ function turnOn(data) {
         var el = $('#' + pin);
         if (value == "0") {
             el.removeClass('bg-warning');
+            $('.led-' + pin).removeClass('led-on');
             $('.cb-' + pin).prop('checked', false);
         } else {
             el.addClass('bg-warning');
+            $('.led-' + pin).addClass('led-on');
             $('.cb-' + pin).prop('checked', true);
         }
     })

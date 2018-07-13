@@ -50,3 +50,87 @@ input:checked + .slider:before {
     -ms-transform: translateX(26px);
     transform: translateX(26px);
 }
+
+
+/*led*/
+.board-box{
+    position:relative;
+}
+.board-img{
+
+}
+.led-box {
+
+}
+.led {
+    position:absolute;
+    visibility:collapse;
+}
+.led-on {
+    visibility: visible;
+}
+.led-p1{
+    top:237px;
+    left:237px;
+}
+.led-p2 {
+    top: 242px;
+    left: 231px;
+}
+.led-p3 {
+    top: 246px;
+    left: 224px;
+}
+.led-p4 {
+    top: 250px;
+    left: 218px;
+}
+.led-p5 {
+    top: 254px;
+    left: 211px;
+}
+.led-p6 {
+    top: 258px;
+    left: 204px;
+}
+.led-p7 {
+    top: 262px;
+    left: 197px;
+}
+.led-p8 {
+    top: 267px;
+    left: 190px;
+}
+.led-p9 {
+    top: 290px;
+    left: 154px;
+}
+.led-p10 {
+    top: 294px;
+    left: 147px;
+}
+.led-p11 {
+    top: 298px;
+    left: 140px;
+}
+.led-p12 {
+    top: 302px;
+    left: 133px;
+}
+.led-p13 {
+    top: 306px;
+    left: 126px;
+}
+.led-p14 {
+    top: 310px;
+    left: 119px;
+}
+.led-p15 {
+    top: 316px;
+    left: 112px;
+}
+.led-p16 {
+    top: 321px;
+    left: 106px;
+}
+

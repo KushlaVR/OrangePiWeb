@@ -67,12 +67,38 @@
         </ul>
     </div>
     <div class="container">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                Керування виходами
-            </div>
-            <div class="panel-body">
+        <h1>Плата розширення портів Raspbery Pi (Raspberry Pi IO Extension Board)</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>Керування виходами</h2>
                 <?php include '_btns.php'; ?>
+            </div>
+            <div class="col-sm-8">
+                <h2>Поточний стан</h2>
+                <div class="jumbotron">
+                    <div class="board-box">
+                        <div class="led-box">
+                            <img src="./img/led-red.png" alt="light of the status led" class="led led-p1" />
+                            <img src="./img/led-red.png" alt="light of the status led" class="led led-p2" />
+                            <img src="./img/led-red.png" alt="light of the status led" class="led led-p3" />
+                            <img src="./img/led-red.png" alt="light of the status led" class="led led-p4" />
+                            <img src="./img/led-red.png" alt="light of the status led" class="led led-p5" />
+                            <img src="./img/led-red.png" alt="light of the status led" class="led led-p6" />
+                            <img src="./img/led-red.png" alt="light of the status led" class="led led-p7" />
+                            <img src="./img/led-red.png" alt="light of the status led" class="led led-p8" />
+
+                            <img src="./img/led-red.png" alt="light of the status led" class="led led-p9" />
+                            <img src="./img/led-red.png" alt="light of the status led" class="led led-p10" />
+                            <img src="./img/led-red.png" alt="light of the status led" class="led led-p11" />
+                            <img src="./img/led-red.png" alt="light of the status led" class="led led-p12" />
+                            <img src="./img/led-red.png" alt="light of the status led" class="led led-p13" />
+                            <img src="./img/led-red.png" alt="light of the status led" class="led led-p14" />
+                            <img src="./img/led-red.png" alt="light of the status led" class="led led-p15" />
+                            <img src="./img/led-red.png" alt="light of the status led" class="led led-p16" />
+                        </div>
+                        <img src="./img/board-2.jpg" alt="Image" />
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -90,15 +116,15 @@
         <br />
         <div class="row">
             <div class="col-sm-4">
-                <img src="./img/board-1.jpg" alt="Image" width="350" />
+                <img src="./img/board-1.jpg" alt="Image" width="300" />
                 <p>Опис фкнкіцй</p>
             </div>
             <div class="col-sm-4">
-                <img src="./img/board-2.jpg" alt="Image" width="350" />
+                <img src="./img/board-2.jpg" alt="Image" width="300" />
                 <p>Вигляд під кутом</p>
             </div>
             <div class="col-sm-4">
-                <img src="./img/board-3.jpg" alt="Image" width="350" />
+                <img src="./img/board-3.jpg" alt="Image" width="300" />
                 <p>Вигляд з боку</p>
             </div>
         </div>
