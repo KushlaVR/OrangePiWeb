@@ -7,6 +7,7 @@
 
     try {
         $values = urldecode($_GET["cmd"]);
+        echo $values;
         if ($values!=NULL){
             $board = new Board;
             if ($board->isCommand($values)){
