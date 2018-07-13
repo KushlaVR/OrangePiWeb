@@ -53,9 +53,39 @@ input:checked + .slider:before {
 
 
 /*led*/
-.board-box{
-    position:relative;
+
+.board-box {
+    position: relative;
+    transform-origin: top left;
+    transform: scale(0.7);
 }
+
+@media (min-width: 576px) {
+    .board-box {
+        transform: scale(0.4);
+    }
+}
+
+@media (min-width: 768px) {
+    .board-box {
+        transform: scale(0.58);
+    }
+}
+
+@media (min-width: 992px) {
+    .board-box {
+        transform: scale(0.82);
+    }
+}
+
+@media (min-width: 1200px) {
+    .board-box {
+        transform: scale(1);
+    }
+}
+
+
+
 .board-img{
 
 }
