@@ -6,7 +6,7 @@
     
 
     try {
-        $values = urldecode($_GET["cmd"]);
+        $values = urldecode($_POST["cmd"]);
         var_dump($values);
         if ($values!=NULL){
             $board = new Board;
@@ -20,7 +20,7 @@
         echo 'Виникла помилка: ',  $e->getMessage(), "\n";
     }
 
-    $ui = urldecode($_GET["ui"]);
+    $ui = urldecode($_POST["ui"]);
     if ($ui=="false"){
         return;
     }
