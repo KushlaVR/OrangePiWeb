@@ -65,7 +65,7 @@
             <li>Кожен GPIO Raspberry виведено на окрему шину (Шина сумісна з датчиками для Arduino. Біля кожного GPIO продубльовано піни живлення і мінус).</li>
         </ul>
     </div>
-    <div class="container-fluid">
+    <div class="container">
         <div class="panel panel-default">
             <div class="panel-heading">
                 Керування виходами
@@ -83,11 +83,6 @@
             <div class="col-md-4">
                 <a href="https://www.olx.ua/uk/obyavlenie/plata-rozshirennya-portv-raspbery-pi-raspberry-pi-io-extension-board-IDzQPdy.html" class="btn btn-default btn-lg">
                     <span class="glyphicon glyphicon-search"></span> Де купити?
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a href="~/tests.php" class="btn btn-default btn-lg">
-                    <span class="glyphicon glyphicon-search"></span> Керування
                 </a>
             </div>
         </div>

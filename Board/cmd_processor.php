@@ -7,7 +7,7 @@
 
     try {
         $values = urldecode($_POST["cmd"]);
-        var_dump($values);
+        //var_dump($values);
         if ($values!=NULL){
             $board = new Board;
             if ($board->isCommand($values)){
@@ -18,10 +18,5 @@
     }
     catch (Exception $e) {
         echo 'Виникла помилка: ',  $e->getMessage(), "\n";
-    }
-
-    $ui = urldecode($_POST["ui"]);
-    if ($ui=="false"){
-        return;
     }
 ?>

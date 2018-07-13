@@ -104,12 +104,18 @@ void handle(){
 			exit(EXIT_FAILURE);
 		}
 		printf("New socket\n");
+		
 		valread = read( new_socket , buffer, 1024);
-		//printf("%s\n",buffer );
+		buffer[valread] = 0;
+		
+		printf("in buffer = ");printf(buffer);printf("\n");
 		board->handle(buffer);
-		send(new_socket , hello , strlen(hello) , 0 );
+		printf("out buffer = ");printf(buffer);printf("\n");
+		
+		send(new_socket , buffer , strlen(buffer) , 0 );
 		int ret = close(new_socket);
 		printf("close result = %d\n", ret);
 		printf("OK sent\n");
+		
 	}
 }

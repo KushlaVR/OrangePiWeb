@@ -9,8 +9,11 @@ private:
 	char val_white = 0xFF, val_yellow = 0xFF;
 public:
 	Board(const int dev1Id, const int dev2Id);
-	void write(int port, bool value);
+	void setPort(int port, bool value);
+	bool getPort(int port);
 	void demo();
 	void handle(char * buffer);
 	void printValues();
+	void read();
+	void write();
 };

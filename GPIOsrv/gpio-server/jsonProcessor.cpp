@@ -42,7 +42,10 @@ void JSonProcessor::endArray()
 
 std::string JSonProcessor::getValue(const char * key)
 {
-	int p = indexOf(key);
+	std::string fullKeyName;
+	fullKeyName = key;
+	if (indexOf("\"") != 0) fullKeyName = "\"" + fullKeyName + "\"";
+	int p = indexOf(fullKeyName.c_str());
 	if (p > 0) {
 		p = indexOf(":", p + 1);
 		//console.printf("p=%d\n", p);
