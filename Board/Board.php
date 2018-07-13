@@ -1,6 +1,4 @@
 <?php
-
-
 /**
  * tests short summary.
  *
@@ -35,18 +33,18 @@ class Board
     }
 
     function cmd_set(){
-		
+
         $buff=json_encode(get_object_vars($this->cmd), JSON_PRETTY_PRINT);
         //var_dump($buff);
 		return $this->sendCommand($buff);
     }
-	
+
 	function cmd_get()
 	{
-		$_cmd->cmd = "get";
+        $_cmd->cmd = "get";
 		return $this->sendCommand(json_encode($_cmd));
 	}
-	
+
 	function sendCommand($cmd_to_send){
 		try{
             $socket=socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
@@ -74,19 +72,18 @@ class Board
                 $msg = sprintf('only %d of %d bytes sent', $length, $sent);
                 trigger_error($msg, E_USER_NOTICE);
             }
-            $revived;
-			$recCount;
-			
-			
+            $revived = "";
+
 			while ($out = socket_read($socket, 2048)){
 				$revived = $revived . $out;
 			}
 			return $revived;
-			
+
         }
         catch (Exception $e) {
             echo 'Виникла помилка: ',  $e->getMessage(), "\n";
         }
+        return "";
 	}
 }
 
