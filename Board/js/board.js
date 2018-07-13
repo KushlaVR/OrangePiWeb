@@ -5,9 +5,9 @@ function onStartup(){
 function addHandlers() {
     $('.btn-on, .btn-off').on('click', (function (e) {
           var url = "/";
-          var cmd = {};
-          cmd["p" + $(this).data('id')] = $(this).data('state')
-          var param = { ui: false, cmd: cmd };
+          var data = {["p" + $(this).data('id')] : $(this).data('state')};
+          //data["p" + $(this).data('id')] = $(this).data('state')
+          var param = { ui: false, cmd: data };
           $.ajax({
               type: "POST",
               url: url,
