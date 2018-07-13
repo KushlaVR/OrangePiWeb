@@ -5,7 +5,14 @@
 #include <stdlib.h>
 #include <netinet/in.h>
 #include <string.h>
+#include <wiringPi.h>
+#include <Board.h>
+#include <jsonProcessor.h>
+
 #define PORT 8001
+
+
+Board * board;
 
 
 char *hello = "OK";
@@ -15,12 +22,16 @@ int addrlen = sizeof(address);
 char buffer[1024] = {0};
 
 void handle();
-
+void test();
 
 int main(int argc, char const **argv)
 {
-    
-    printf("GPIO server started\n");
+    test();
+	printf("GPIO server started\n");
+	
+	board = new Board(0x27, 0x25);
+	
+    printf("Board initialized\n");
   
     int opt = 1;
     
@@ -64,6 +75,24 @@ int main(int argc, char const **argv)
     return 0;
 }
 
+void test(){
+	//std::string str = "{\"cmd\":\"demo\"}";
+	//printf(str.c_str());
+	//printf("\n");
+	
+	//JSonProcessor s = JSonProcessor(str.c_str());
+	
+	//printf("indexOf = ");
+	//printf("%d",s.indexOf("cmd"));
+	//printf("\n");
+	
+	
+	//printf("cmd = ");
+	//printf(s.getValue("cmd").c_str());
+	//printf("\n");
+	//printf(buffer);
+}
+
 
 void handle(){
 	printf("Handle cliens\n");
@@ -72,12 +101,21 @@ void handle(){
 		if ((new_socket = accept(server_fd, (struct sockaddr *)&address, (socklen_t*)&addrlen))<0)
 		{
 			perror("accept");
-        	exit(EXIT_FAILURE);
-    	}
+			exit(EXIT_FAILURE);
+		}
 		printf("New socket\n");
-    	valread = read( new_socket , buffer, 1024);
-    	printf("%s\n",buffer );
-    	send(new_socket , hello , strlen(hello) , 0 );
-    	printf("OK sent\n");
+		
+		valread = read( new_socket , buffer, 1024);
+		buffer[valread] = 0;
+		
+		printf("in buffer = ");printf(buffer);printf("\n");
+		board->handle(buffer);
+		printf("out buffer = ");printf(buffer);printf("\n");
+		
+		send(new_socket , buffer , strlen(buffer) , 0 );
+		int ret = close(new_socket);
+		printf("close result = %d\n", ret);
+		printf("OK sent\n");
+		
 	}
 }

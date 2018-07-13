@@ -1,0 +1,7 @@
+﻿#!/bin/bash
+cd ..
+git clone https://github.com/KushlaVR/OrangePiWeb.git
+cd  OrangePiWeb
+git remote add upstream  https://github.com/KushlaVR/OrangePiWeb.git
+git remote -v
+

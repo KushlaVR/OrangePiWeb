@@ -19,9 +19,13 @@
     <Compile Include=".gitattributes" />
     <Compile Include=".gitignore" />
     <Compile Include=".htaccess" />
-    <Compile Include="composer.json" />
+    <Compile Include="cmd_processor.php" />
     <Compile Include="index.php" />
+    <Compile Include="Board.php" />
     <Compile Include="web.config" />
+    <Compile Include="_board.php" />
+    <Compile Include="_btn.php" />
+    <Compile Include="_btns.php" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="css\" />
@@ -35,7 +39,9 @@
     <Content Include="img\board-1.jpg" />
     <Content Include="img\board-2.jpg" />
     <Content Include="img\board-3.jpg" />
+    <Content Include="img\led-red.png" />
     <Content Include="img\my.jpg" />
+    <Content Include="js\board.js" />
     <Content Include="js\bootstrap.bundle.js" />
     <Content Include="js\bootstrap.bundle.js.map" />
     <Content Include="js\bootstrap.bundle.min.js" />
