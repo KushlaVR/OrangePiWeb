@@ -46,7 +46,7 @@ class Board
 	}
 
 	function sendCommand($cmd_to_send){
-		try{
+        try{
             $socket=socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
             if ( !$socket ) {
                 $errno = socket_last_error();
@@ -83,6 +83,7 @@ class Board
         catch (Exception $e) {
             echo 'Виникла помилка: ',  $e->getMessage(), "\n";
         }
+        
         return "";
 	}
 }

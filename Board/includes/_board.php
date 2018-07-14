@@ -8,9 +8,6 @@
  * @version 1.0
  * @author Віталік
  */
-class _board
-{
-}
 
 ?>
 

@@ -20,17 +20,26 @@
     <Compile Include=".gitignore" />
     <Compile Include=".htaccess" />
     <Compile Include="cmd_processor.php" />
+    <Compile Include="includes\body.php" />
+    <Compile Include="includes\custom.php" />
+    <Compile Include="includes\header.php" />
+    <Compile Include="404.php" />
+    <Compile Include="includes\test.php" />
+    <Compile Include="includes\_404.php" />
     <Compile Include="index.php" />
     <Compile Include="Board.php" />
+    <Compile Include="includes\index.php" />
+    <Compile Include="utils.php" />
     <Compile Include="web.config" />
-    <Compile Include="_board.php" />
-    <Compile Include="_btn.php" />
-    <Compile Include="_btns.php" />
+    <Compile Include="includes\_board.php" />
+    <Compile Include="includes\_btn.php" />
+    <Compile Include="includes\_btns.php" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="css\" />
     <Folder Include="img\" />
     <Folder Include="js\" />
+    <Folder Include="includes\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\bootstrap.css" />
