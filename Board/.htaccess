@@ -11,3 +11,5 @@
 
 # Prevent file browsing
 Options -Indexes -MultiViews
+
+ErrorDocument 404 /404.php
