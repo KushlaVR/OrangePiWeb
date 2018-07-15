@@ -18,6 +18,10 @@
   <ItemGroup>
     <Compile Include=".gitattributes" />
     <Compile Include=".gitignore" />
+    <Compile Include="content\.htaccess" />
+    <Compile Include="content\user.usr" />
+    <Compile Include="includes\login.php" />
+    <Compile Include="login.php" />
     <Compile Include="__.htaccess" />
     <Compile Include="cmd_processor.php" />
     <Compile Include="includes\menu.php" />

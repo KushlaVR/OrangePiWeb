@@ -88,5 +88,68 @@ function renderPartial($filePath, $model = null, $print = true){
     return $output;
 }
 
+function Redirect($url, $permanent = false)
+{
+    header('Location: ' . $url, true, $permanent ? 301 : 302);
+
+    exit();
+}
+
+$sid = session_id();
+if ($sid==""){
+    session_start();
+    $sid = session_id();
+}
+
+
+$key = getSerialNumber();
+$username = $_REQUEST['user'];
+$password = $_REQUEST['password'];
+$error = null;
+
+if (!is_null($username) && !is_null($password)){
+    //Авторизація
+    $pwdHash = upwdHash($username);
+    $userHash = md5($password);
+    if ($pwdHash == $userHash){
+        setcookie('user_id', $username);
+        setcookie('user_passport', md5($username . $key . '1998'));
+        unset($password);
+        Redirect('/');
+    }
+
+} else {
+    $username = $_COOKIE['user_id'];
+    if (!is_null($username)){
+        if($_COOKIE['user_passport']!= md5($username . $key . '1998')){
+            $username = "";
+            setcookie('user_id', '');
+            setcookie('user_passport', '');
+        }
+    }
+}
+
+
+
+
+function upwdHash($userName){
+    $pwdFileName = $_SERVER["DOCUMENT_ROOT"] . "/content/" . urlencode($userName) . ".usr";
+    if (!file_exists($pwdFileName)){
+        $error = "хибне імя користувача";
+    } else {
+        try{
+            $pwdfile = fopen($pwdFileName, "r");
+            $pwdHash = fread($pwdfile, filesize($pwdFileName));
+            fclose($pwdfile);
+            return $pwdHash;
+        }
+        catch (Exception $e) {
+            $error = 'Виникла помилка: '.  $e->getMessage(). "\n";
+        }
+    }
+
+    return "123";
+}
+
 
 ?>
