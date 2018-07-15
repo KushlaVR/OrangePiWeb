@@ -11,7 +11,7 @@
 
 ?>
 
-<div class="jumbotron">
+<div class="jumbotron" style="overflow-x:hidden">
     <div class="board-box">
         <div class="led-box">
             <img src="./img/led-red.png" alt="light of the status led" class="led led-p1" />
