@@ -24,65 +24,53 @@
     <script src="./js/jquery-3.0.0.js"></script>
     <script src="./js/bootstrap.js"></script>
     <script src="./js/board.js"></script>
-    <style>
-        .bg-1 {
-            background-color: #1abc9c;
-            color: #ffffff;
-        }
-
-        .bg-2 {
-            background-color: #474e5d;
-            color: #ffffff;
-        }
-
-        .bg-3 {
-            background-color: #ffffff;
-            color: #555555;
-        }
-
-        .container-fluid {
-            padding-top: 70px;
-            padding-bottom: 70px;
-        }
-
-        .img-circle {
-            border-radius: 50%;
-        }
-    </style>
-
 </head>
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="48">
     <div class="container-fluid bg-1 text-center">
+        <nav class="navbar bg-1 fixed-top">
+            <div class="container">
+                <div class="" id="myNavbar">
+                    <ul class="nav navbar-right">
+                        <li>
+                            <a href="#mabout">МОЖЛТВОСІ</a>
+                        </li>
+                        <li>
+                            <a href="#mcontrol">КЕРУВАННЯ</a>
+                        </li>
+                        <li>
+                            <a href="#mview">ВИГЛЯД</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <br />
+        <br />
         <?php renderPartial($model->header); ?>
+        <br />
+        <br />
     </div>
 
-    <div class="container-fluid bg-2">
+    <div class="container-fluid bg-2" id="mabout">
+        <br />
+        <br />
+        <?php renderPartial($model->menu); ?>
+        <br />
+        <br />
+    </div>
+    <div class="container" id="mcontrol">
+        <br />
+        <br />
         <?php renderPartial($model->body); ?>
     </div>
-    <div class="container">
-        <?php renderPartial($model->custom); ?>
-    </div>
-    <div class="container-fluid bg-3 text-center">
-        <h3>Як виглядає плата?</h3>
+    <div class="container-fluid bg-3 text-center" id="mview">
         <br />
-        <div class="row">
-            <div class="col-sm-4">
-                <img src="./img/board-1.jpg" alt="Image" width="300" />
-                <p>Опис фкнкіцй</p>
-            </div>
-            <div class="col-sm-4">
-                <img src="./img/board-2.jpg" alt="Image" width="300" />
-                <p>Вигляд під кутом</p>
-            </div>
-            <div class="col-sm-4">
-                <img src="./img/board-3.jpg" alt="Image" width="300" />
-                <p>Вигляд з боку</p>
-            </div>
-        </div>
+        <br />
+        <?php renderPartial($model->footer); ?>
+        <br />
+        <br />
     </div>
-    <script>
-        $(document).ready(onStartup)
-    </script>
 </body>
 </html>
 

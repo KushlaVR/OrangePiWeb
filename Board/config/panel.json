@@ -1,0 +1,10 @@
+﻿{
+  "name": "Pi GPIO Extantion board",
+  "cell-width": 32,
+  "cell-height": 32,
+  "col": 6,
+  "row": 12,
+  "view": {
+
+  }
+}

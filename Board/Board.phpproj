@@ -18,10 +18,11 @@
   <ItemGroup>
     <Compile Include=".gitattributes" />
     <Compile Include=".gitignore" />
-    <Compile Include=".htaccess" />
+    <Compile Include="__.htaccess" />
     <Compile Include="cmd_processor.php" />
+    <Compile Include="includes\menu.php" />
     <Compile Include="includes\body.php" />
-    <Compile Include="includes\custom.php" />
+    <Compile Include="includes\footer.php" />
     <Compile Include="includes\header.php" />
     <Compile Include="404.php" />
     <Compile Include="includes\test.php" />
@@ -40,8 +41,13 @@
     <Folder Include="img\" />
     <Folder Include="js\" />
     <Folder Include="includes\" />
+    <Folder Include="content\" />
+    <Folder Include="config\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="config\panel.json" />
+    <Content Include="content\socked-disabled.json" />
+    <Content Include="content\key.txt" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\template.css" />

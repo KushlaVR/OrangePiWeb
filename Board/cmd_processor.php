@@ -2,21 +2,25 @@
 function __autoload($class_name) {
     require_once $class_name . '.php';
 }
-__autoload('Board');
 
+$values = urldecode($_POST["cmd"]);
+if ($values!=NULL)
+{
+    if (!file_exists($_SERVER["DOCUMENT_ROOT"] . '/content/socked-disabled.json')){
+        __autoload('Board');
+        try {
+            $board = new Board;
+            if ($board->isCommand($values)){
+                $board->gpio_exec();
+            }
 
-try {
-    $values = urldecode($_POST["cmd"]);
-    //var_dump($values);
-    if ($values!=NULL){
-        $board = new Board;
-        if ($board->isCommand($values)){
-            //var_dump($board);
-            $board->gpio_exec();
         }
+        catch (Exception $e) {
+            echo 'Виникла помилка: ',  $e->getMessage(), "\n";
+        }
+    } else {
+        echo $values;
     }
 }
-catch (Exception $e) {
-    echo 'Виникла помилка: ',  $e->getMessage(), "\n";
-}
+
 ?>

@@ -1,3 +1,60 @@
+.bg-1 {
+    background-color: #1abc9c;
+    color: #ffffff;
+}
+
+.bg-2 {
+    background-color: #474e5d;
+    color: #ffffff;
+}
+
+.bg-3 {
+    background-color: #ffffff;
+    color: #555555;
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+
+
+
+.navbar {
+    margin-bottom: 0;
+    z-index: 9999;
+    border: 0;
+    font-size: 16px !important;
+    line-height: 2 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    height:48px;
+}
+
+    .navbar li {
+        float: left;
+    }
+
+        .navbar li a, .navbar .navbar-brand {
+            color: #fff !important;
+        }
+
+        .navbar li a {
+            padding:5px;
+        }
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #1abc9c !important;
+    background-color: #fff !important;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+
+
+
 /* The switch - the box around the slider */
 .switch {
     position: relative;
@@ -87,81 +144,97 @@ input:checked + .slider:before {
 
 
 
-.board-img{
-
+.board-img {
 }
+
 .led-box {
+}
 
-}
 .led {
-    position:absolute;
-    visibility:collapse;
+    position: absolute;
+    visibility: collapse;
 }
+
 .led-on {
     visibility: visible;
 }
-.led-p1{
-    top:237px;
-    left:237px;
+
+.led-p1 {
+    top: 237px;
+    left: 237px;
 }
+
 .led-p2 {
     top: 242px;
     left: 231px;
 }
+
 .led-p3 {
     top: 246px;
     left: 224px;
 }
+
 .led-p4 {
     top: 250px;
     left: 218px;
 }
+
 .led-p5 {
     top: 254px;
     left: 211px;
 }
+
 .led-p6 {
     top: 258px;
     left: 204px;
 }
+
 .led-p7 {
     top: 262px;
     left: 197px;
 }
+
 .led-p8 {
     top: 267px;
     left: 190px;
 }
+
 .led-p9 {
     top: 290px;
     left: 154px;
 }
+
 .led-p10 {
     top: 294px;
     left: 147px;
 }
+
 .led-p11 {
     top: 298px;
     left: 140px;
 }
+
 .led-p12 {
     top: 302px;
     left: 133px;
 }
+
 .led-p13 {
     top: 306px;
     left: 126px;
 }
+
 .led-p14 {
     top: 310px;
     left: 119px;
 }
+
 .led-p15 {
     top: 316px;
     left: 112px;
 }
+
 .led-p16 {
     top: 321px;
     left: 106px;
 }
-
