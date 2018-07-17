@@ -20,13 +20,13 @@
     <div class="col-sm-8">
         <h2>Поточний стан</h2>
         <?php renderPartial('includes/_board.php'); ?>
-        <a href="https://www.olx.ua/uk/obyavlenie/plata-rozshirennya-portv-raspbery-pi-raspberry-pi-io-extension-board-IDzQPdy.html" class="btn btn-primary btn-lg">
+        <a href="https://www.olx.ua/uk/obyavlenie/plata-rozshirennya-portv-raspbery-pi-raspberry-pi-io-extension-board-IDzQPdy.html" class="btn btn-primary btn-lg" target="_blank">
             <span class="glyphicon glyphicon-search"></span> Де купити?
         </a>
-        <a href="https://github.com/KushlaVR/OrangePiIOExtensionBoard" class="btn btn-primary btn-lg">
+        <a href="https://github.com/KushlaVR/OrangePiIOExtensionBoard" class="btn btn-primary btn-lg" target="_blank">
             Як зробити самостійно Git hub
         </a>
-        <a href="https://github.com/KushlaVR/OrangePiWeb" class="btn btn-primary btn-lg">
+        <a href="https://github.com/KushlaVR/OrangePiWeb" class="btn btn-primary btn-lg" target="_blank">
             Цей портал на Git hub
         </a>
     </div>
