@@ -23,6 +23,12 @@
         <a href="https://www.olx.ua/uk/obyavlenie/plata-rozshirennya-portv-raspbery-pi-raspberry-pi-io-extension-board-IDzQPdy.html" class="btn btn-primary btn-lg">
             <span class="glyphicon glyphicon-search"></span> Де купити?
         </a>
+        <a href="https://github.com/KushlaVR/OrangePiIOExtensionBoard" class="btn btn-primary btn-lg">
+            Як зробити самостійно Git hub
+        </a>
+        <a href="https://github.com/KushlaVR/OrangePiWeb" class="btn btn-primary btn-lg">
+            Цей портал на Git hub
+        </a>
     </div>
 </div>
 <script>
