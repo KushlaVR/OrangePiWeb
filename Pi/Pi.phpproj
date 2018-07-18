@@ -1,0 +1,72 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>Pi</Name>
+    <ProjectGuid>{bf4182bb-fe22-4e4c-80c2-918a66e30c0a}</ProjectGuid>
+    <RootNamespace>
+    </RootNamespace>
+    <OutputType>Library</OutputType>
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+    <RuntimeVersion>7.1</RuntimeVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="config\config.php.template" />
+    <Compile Include="content-sample\sub\index.md" />
+    <Compile Include="content-sample\sub\page.md" />
+    <Compile Include="content-sample\404.md" />
+    <Compile Include="content-sample\index.md" />
+    <Compile Include="lib\AbstractPicoPlugin.php" />
+    <Compile Include="lib\Pico.php" />
+    <Compile Include="lib\PicoPluginInterface.php" />
+    <Compile Include="lib\PicoTwigExtension.php" />
+    <Compile Include="plugins\00-PicoDeprecated.php" />
+    <Compile Include="plugins\01-PicoParsePagesContent.php" />
+    <Compile Include="plugins\02-PicoExcerpt.php" />
+    <Compile Include="plugins\DummyPlugin.php" />
+    <Compile Include="plugins\_pico_private\pico_private.php" />
+    <Compile Include="plugins\_pico_private\pico_private_conf.php" />
+    <Compile Include="themes\default\font\fontello.eot" />
+    <Compile Include="themes\default\font\fontello.svg" />
+    <Compile Include="themes\default\font\fontello.ttf" />
+    <Compile Include="themes\default\font\fontello.woff" />
+    <Compile Include="themes\default\font\fontello.woff2" />
+    <Compile Include="themes\default\font\LICENSE.txt" />
+    <Compile Include="themes\default\scripts\modernizr-2.6.1.min.js" />
+    <Compile Include="themes\default\fontello.css" />
+    <Compile Include="themes\default\index.twig" />
+    <Compile Include="themes\default\menu-icon.png" />
+    <Compile Include="themes\default\style.css" />
+    <Compile Include=".gitattributes" />
+    <Compile Include=".gitignore" />
+    <Compile Include=".htaccess" />
+    <Compile Include="composer.json" />
+    <Compile Include="CONTRIBUTING.md" />
+    <Compile Include="index.php" />
+    <Compile Include="LICENSE.md" />
+    <Compile Include="README.md" />
+    <Compile Include="web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="config" />
+    <Folder Include="content-sample\sub" />
+    <Folder Include="content-sample" />
+    <Folder Include="lib" />
+    <Folder Include="plugins" />
+    <Folder Include="plugins\_pico_private\" />
+    <Folder Include="themes\default\font" />
+    <Folder Include="themes\default\scripts" />
+    <Folder Include="themes\default" />
+    <Folder Include="themes" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="plugins\_pico_private\license.txt" />
+    <Content Include="plugins\_pico_private\README.md" />
+    <Content Include="themes\default\login.html" />
+  </ItemGroup>
+</Project>

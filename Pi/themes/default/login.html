@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>Pico private login test</h1>
+    <form method="post">
+        {% if login_error %}<p class="error">{{ login_error }}</p>{% endif %}
+        <input type="text" name="username" id="username" placeholder="Username" value="{{ username }}" />
+        <input type="password" name="password" id="password" placeholder="Password" />
+        <input class="alignright" type="submit" value="Login" />
+        {% if redirect_url %}<input type="hidden" name="redirect_url" value="{{ redirect_url }}" />{% endif %}
+    </form>
+</body>
+</html>
