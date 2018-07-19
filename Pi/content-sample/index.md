@@ -1,5 +1,6 @@
 ---
-Title: Welcome
+Title: Плата
+Template: front
 Description: Pico is a stupidly simple, blazing fast, flat file CMS.
 social:
     - title: Visit us on GitHub

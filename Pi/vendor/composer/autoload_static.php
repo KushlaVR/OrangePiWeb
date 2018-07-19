@@ -8,8 +8,8 @@ class ComposerStaticInitb6f6dff94c8917b2287203c0492def55
 {
     public static $files = array (
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
-        '10a6847eba8a430a134fad89f4a30a26' => __DIR__ . '/..' . '/zendframework/zend-cache/autoload/patternPluginManagerPolyfill.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        '10a6847eba8a430a134fad89f4a30a26' => __DIR__ . '/..' . '/zendframework/zend-cache/autoload/patternPluginManagerPolyfill.php',
         'fe1bcd0336136e435eaf197895daf81a' => __DIR__ . '/..' . '/nikic/php-parser/lib/bootstrap.php',
         '742b7e606e92b28dd726e835467f413a' => __DIR__ . '/..' . '/herrera-io/json/src/lib/json_version.php',
         'f0e9d233388e461ee3c460665eb265f0' => __DIR__ . '/..' . '/herrera-io/phar-update/src/lib/constants.php',
@@ -220,16 +220,16 @@ class ComposerStaticInitb6f6dff94c8917b2287203c0492def55
         array (
             'phpDocumentor' => 
             array (
-                0 => __DIR__ . '/..' . '/phpdocumentor/fileset/src',
-                1 => __DIR__ . '/..' . '/phpdocumentor/fileset/tests/unit',
-                2 => __DIR__ . '/..' . '/phpdocumentor/graphviz/src',
-                3 => __DIR__ . '/..' . '/phpdocumentor/graphviz/tests/unit',
-                4 => __DIR__ . '/..' . '/phpdocumentor/phpdocumentor/src',
-                5 => __DIR__ . '/..' . '/phpdocumentor/phpdocumentor/tests/unit',
-                6 => __DIR__ . '/..' . '/phpdocumentor/reflection/src',
-                7 => __DIR__ . '/..' . '/phpdocumentor/reflection/tests/unit',
-                8 => __DIR__ . '/..' . '/phpdocumentor/reflection/tests/mocks',
-                9 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+                0 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+                1 => __DIR__ . '/..' . '/phpdocumentor/reflection/src',
+                2 => __DIR__ . '/..' . '/phpdocumentor/reflection/tests/unit',
+                3 => __DIR__ . '/..' . '/phpdocumentor/reflection/tests/mocks',
+                4 => __DIR__ . '/..' . '/phpdocumentor/graphviz/src',
+                5 => __DIR__ . '/..' . '/phpdocumentor/graphviz/tests/unit',
+                6 => __DIR__ . '/..' . '/phpdocumentor/fileset/src',
+                7 => __DIR__ . '/..' . '/phpdocumentor/fileset/tests/unit',
+                8 => __DIR__ . '/..' . '/phpdocumentor/phpdocumentor/src',
+                9 => __DIR__ . '/..' . '/phpdocumentor/phpdocumentor/tests/unit',
             ),
         ),
         'T' => 

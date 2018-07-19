@@ -13,7 +13,7 @@ desktop.ini
 # Composer
 /composer.lock
 /composer.phar
-/vendor
+
 
 # Build system
 /_build/phpdoc

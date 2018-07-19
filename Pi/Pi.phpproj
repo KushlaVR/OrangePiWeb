@@ -16,9 +16,9 @@
     <IncludeDebugInformation>false</IncludeDebugInformation>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="config\config.php.template" />
-    <Compile Include="content-sample\sub\index.md" />
-    <Compile Include="content-sample\sub\page.md" />
+    <Compile Include="config\config.php" />
+    <Compile Include="content-sample\info\01-functions.md" />
+    <Compile Include="content-sample\info\99-controll.md" />
     <Compile Include="content-sample\404.md" />
     <Compile Include="content-sample\index.md" />
     <Compile Include="lib\AbstractPicoPlugin.php" />
@@ -54,19 +54,50 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="config" />
-    <Folder Include="content-sample\sub" />
+    <Folder Include="content-sample\info\" />
     <Folder Include="content-sample" />
     <Folder Include="lib" />
+    <Folder Include="assets\" />
     <Folder Include="plugins" />
     <Folder Include="plugins\_pico_private\" />
     <Folder Include="themes\default\font" />
     <Folder Include="themes\default\scripts" />
     <Folder Include="themes\default" />
     <Folder Include="themes" />
+    <Folder Include="themes\kushlavr\" />
+    <Folder Include="themes\kushlavr\css\" />
+    <Folder Include="themes\kushlavr\img\" />
+    <Folder Include="themes\kushlavr\js\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\board-1.jpg" />
+    <Content Include="assets\board-2.jpg" />
+    <Content Include="assets\board-3.jpg" />
+    <Content Include="assets\led-red.png" />
+    <Content Include="content-sample\login.md" />
     <Content Include="plugins\_pico_private\license.txt" />
     <Content Include="plugins\_pico_private\README.md" />
     <Content Include="themes\default\login.html" />
+    <Content Include="themes\kushlavr\css\bootstrap.css" />
+    <Content Include="themes\kushlavr\css\bootstrap.min.css" />
+    <Content Include="themes\kushlavr\css\template.css" />
+    <Content Include="themes\kushlavr\img\board-1.jpg" />
+    <Content Include="themes\kushlavr\img\board-2.jpg" />
+    <Content Include="themes\kushlavr\img\board-3.jpg" />
+    <Content Include="themes\kushlavr\img\led-red.png" />
+    <Content Include="themes\kushlavr\img\my.jpg" />
+    <Content Include="themes\kushlavr\front.twig" />
+    <Content Include="themes\kushlavr\login.twig" />
+    <Content Include="themes\kushlavr\index.twig" />
+    <Content Include="themes\kushlavr\js\board.js" />
+    <Content Include="themes\kushlavr\js\bootstrap.bundle.js" />
+    <Content Include="themes\kushlavr\js\bootstrap.bundle.js.map" />
+    <Content Include="themes\kushlavr\js\bootstrap.bundle.min.js" />
+    <Content Include="themes\kushlavr\js\bootstrap.bundle.min.js.map" />
+    <Content Include="themes\kushlavr\js\bootstrap.js" />
+    <Content Include="themes\kushlavr\js\bootstrap.js.map" />
+    <Content Include="themes\kushlavr\js\bootstrap.min.js" />
+    <Content Include="themes\kushlavr\js\bootstrap.min.js.map" />
+    <Content Include="themes\kushlavr\js\jquery-3.0.0.js" />
   </ItemGroup>
 </Project>
