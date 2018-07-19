@@ -24,6 +24,15 @@ Title: Можливості
 
 
 
-
-![Загальний вигляд](%base_url%/assets/board-1.png)
-![Вигляд з боку](%base_url%/assets/board-2.png)
+<h3>Як виглядає плата?</h3>
+<br />
+<div class="row">
+    <div class="col-md-6">
+        <img src="./img/board-1.jpg" alt="Image" width="100%" />
+        <p>Опис фкнкіцй</p>
+    </div>
+    <div class="col-md-6">
+        <img src="./img/board-3.jpg" alt="Image" width="100%" />
+        <p>Вигляд з боку</p>
+    </div>
+</div>

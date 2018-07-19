@@ -29,6 +29,10 @@
     <Compile Include="plugins\01-PicoParsePagesContent.php" />
     <Compile Include="plugins\02-PicoExcerpt.php" />
     <Compile Include="plugins\DummyPlugin.php" />
+    <Compile Include="plugins\pcf8574\pcf8574.php" />
+    <Compile Include="plugins\pcf8574\_board.php" />
+    <Compile Include="plugins\pcf8574\_btn.php" />
+    <Compile Include="plugins\pcf8574\_btns.php" />
     <Compile Include="plugins\_pico_private\pico_private.php" />
     <Compile Include="plugins\_pico_private\pico_private_conf.php" />
     <Compile Include="themes\default\font\fontello.eot" />
@@ -57,8 +61,9 @@
     <Folder Include="content-sample\info\" />
     <Folder Include="content-sample" />
     <Folder Include="lib" />
-    <Folder Include="assets\" />
+    <Folder Include="img\" />
     <Folder Include="plugins" />
+    <Folder Include="plugins\pcf8574\" />
     <Folder Include="plugins\_pico_private\" />
     <Folder Include="themes\default\font" />
     <Folder Include="themes\default\scripts" />
@@ -70,10 +75,10 @@
     <Folder Include="themes\kushlavr\js\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="assets\board-1.jpg" />
-    <Content Include="assets\board-2.jpg" />
-    <Content Include="assets\board-3.jpg" />
-    <Content Include="assets\led-red.png" />
+    <Content Include="img\board-1.jpg" />
+    <Content Include="img\board-2.jpg" />
+    <Content Include="img\board-3.jpg" />
+    <Content Include="img\led-red.png" />
     <Content Include="content-sample\login.md" />
     <Content Include="plugins\_pico_private\license.txt" />
     <Content Include="plugins\_pico_private\README.md" />

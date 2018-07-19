@@ -9,6 +9,8 @@
  * @author Віталік
  */
 
+if (! class_exists($className)) return;
+
 ?>
 
 <div class="jumbotron" style="overflow-x:hidden">

@@ -1,3 +1,4 @@
+<?php if (! class_exists($className)) return; ?>
 
 <div class="row">
     <div class="col-sm-12">

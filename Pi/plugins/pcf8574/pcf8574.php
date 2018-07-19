@@ -42,6 +42,7 @@ final class pcf8574 extends AbstractPicoPlugin
      */
     public function onPluginsLoaded(array &$plugins)
     {
+
         // your code
     }
 
@@ -310,5 +311,15 @@ final class pcf8574 extends AbstractPicoPlugin
     public function onPageRendered(&$output)
     {
         // your code
+    }
+
+
+    private function render_php($path)
+    {
+        ob_start();
+        include($path);
+        $var=ob_get_contents();
+        ob_end_clean();
+        return $var;
     }
 }
