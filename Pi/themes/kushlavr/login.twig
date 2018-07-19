@@ -1,0 +1,72 @@
+﻿
+<!DOCTYPE html>
+
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>{% if meta.title %}{{ meta.title }} | {% endif %}{{ site_title }}</title>
+    {% if meta.description %}
+    <meta name="description" content="{{ meta.description|striptags }}">
+    {% endif %}{% if meta.robots %}
+    <meta name="robots" content="{{ meta.robots }}">
+    {% endif %}
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{{ theme_url }}/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="{{ theme_url }}/css/template.css" type="text/css" />
+    <script src="{{ theme_url }}/js/jquery-3.0.0.js"></script>
+    <script src="{{ theme_url }}/js/bootstrap.js"></script>
+    <script src="{{ theme_url }}/js/board.js"></script>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="48">
+    <div class="container-fluid bg-1 text-center">
+        <nav class="navbar bg-1 fixed-top">
+            <div class="container">
+                <div class="float-left">
+                    <img src="{{ theme_url }}/img/my.jpg" class="img-circle float-left mr-2" alt="Bird" width="42" height="42" />
+
+                    <ul class="nav navbar-right">
+                        {% for page in pages if page.title  %}
+                        <li {% if page.id == current_page.id %} class="active" {% endif %}>
+                            <a href="{{ page.url }}">{{ page.title }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="float-right">
+                    <ul class="nav navbar-right">
+                        <li><a>{{ username }}</a></li>
+                        <li>
+                            {% if authed %}
+                            <a href="?logout" class="active">вийти</a>
+                            {% else %}
+                            <a href="?login" class="active">Авторизуватись</a>
+                            {% endif %}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="text-center bg-2">
+        <br />
+        <br />
+        <h1>Авторизація</h1>
+        <form class="login" method="post">
+            <input type="text" name="username" placeholder="Ім'я" value="{{ username }}"/>
+            <input type="password" name="password" placeholder="Пароль" />
+            <input type="submit" value="Вхід" class="btn btn-success btn-lg" />
+            <div class="remember-forgot">
+                <div class="row">
+                    <br />
+                </div>
+            </div>
+            {% if redirect_url %}<input type="hidden" name="redirect_url" value="{{ redirect_url }}"/>{% endif %}
+        </form>
+        {% if login_error %}<p class="error">">{{ login_error }}</p>p>{% endif %}
+        <br />
+        <br />
+
+    </div>
+</body>
+</html>

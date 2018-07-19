@@ -1,0 +1,276 @@
+.bg-1 {
+    background-color: #1abc9c;
+    color: #ffffff;
+}
+
+.bg-2 {
+    background-color: #474e5d;
+    color: #ffffff;
+}
+
+.bg-3 {
+    background-color: #ffffff;
+    color: #555555;
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+
+
+.navbar {
+    margin-bottom: 0;
+    z-index: 9999;
+    border: 0;
+    font-size: 16px !important;
+    line-height: 2 !important;
+    letter-spacing: 2px;
+    border-radius: 0;
+    padding: 0;
+}
+
+    .navbar li {
+        float: left;
+    }
+
+        .navbar li a, .navbar .navbar-brand {
+            color: #fff !important;
+            text-transform: uppercase;
+        }
+
+        .navbar li a {
+            padding: 5px 20px;
+            display: block;
+        }
+
+
+.nav li a:hover, .nav li.active a {
+    color: #1abc9c !important;
+    background-color: #fff !important;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    vertical-align: middle;
+    margin: 0;
+}
+
+    /* Hide default HTML checkbox */
+    .switch input {
+        display: none;
+    }
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+
+/*led*/
+
+.board-box {
+    position: relative;
+    transform-origin: top left;
+    transform: scale(0.7);
+}
+
+@media (min-width: 576px) {
+    .board-box {
+        transform: scale(0.4);
+    }
+}
+
+@media (min-width: 768px) {
+    .board-box {
+        transform: scale(0.58);
+    }
+}
+
+@media (min-width: 992px) {
+    .board-box {
+        transform: scale(0.82);
+    }
+}
+
+@media (min-width: 1200px) {
+    .board-box {
+        transform: scale(1);
+    }
+}
+
+
+form.login {
+    width: 250px;
+    margin: auto;
+    font-size: 18px;
+}
+
+    form.login input[type="submit"] {
+        width: 100%;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-top: 16px;
+        outline: 0;
+        cursor: pointer;
+        letter-spacing: 1px;
+    }
+
+    form.login input[type="text"], form.login input[type="password"] {
+        width: 100%;
+        margin: 0;
+        padding: 5px 10px;
+        background: 0;
+        border: 0;
+        border-bottom: 1px solid #FFFFFF;
+        outline: 0;
+        font-style: italic;
+        font-weight: 400;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+        color: #FFFFFF;
+        outline: 0;
+    }
+
+    form.login .remember-forgot {
+        font-size: 14px;
+    }
+
+.board-img {
+}
+
+.led-box {
+}
+
+.led {
+    position: absolute;
+    visibility: collapse;
+}
+
+.led-on {
+    visibility: visible;
+}
+
+.led-p1 {
+    top: 237px;
+    left: 237px;
+}
+
+.led-p2 {
+    top: 242px;
+    left: 231px;
+}
+
+.led-p3 {
+    top: 246px;
+    left: 224px;
+}
+
+.led-p4 {
+    top: 250px;
+    left: 218px;
+}
+
+.led-p5 {
+    top: 254px;
+    left: 211px;
+}
+
+.led-p6 {
+    top: 258px;
+    left: 204px;
+}
+
+.led-p7 {
+    top: 262px;
+    left: 197px;
+}
+
+.led-p8 {
+    top: 267px;
+    left: 190px;
+}
+
+.led-p9 {
+    top: 290px;
+    left: 154px;
+}
+
+.led-p10 {
+    top: 294px;
+    left: 147px;
+}
+
+.led-p11 {
+    top: 298px;
+    left: 140px;
+}
+
+.led-p12 {
+    top: 302px;
+    left: 133px;
+}
+
+.led-p13 {
+    top: 306px;
+    left: 126px;
+}
+
+.led-p14 {
+    top: 310px;
+    left: 119px;
+}
+
+.led-p15 {
+    top: 316px;
+    left: 112px;
+}
+
+.led-p16 {
+    top: 321px;
+    left: 106px;
+}
