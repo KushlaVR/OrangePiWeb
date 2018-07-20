@@ -278,10 +278,10 @@ final class pcf8574 extends AbstractPicoPlugin
     public function onPageRendering(Twig_Environment &$twig, array &$twigVariables, &$templateName)
     { 
         // your code
-        $renderBoard = $twigVariables['meta']['PCF8574'];
-        if ($renderBoard){
-            $twigVariables['PCF8574'] = "<h1>PCF8574</h1>";
-        }
+        //$renderBoard = $twigVariables['meta']['PCF8574'];
+        //if ($renderBoard){
+        //    $twigVariables['PCF8574'] = "<h1>PCF8574</h1>";
+        //}
     }
     /**
      * Triggered after Pico has rendered the page
@@ -295,10 +295,12 @@ final class pcf8574 extends AbstractPicoPlugin
     }
     private function render_php($path)
     {
+        /*
         ob_start();
         include($path);
         $var=ob_get_contents();
         ob_end_clean();
         return $var;
+        */
     }
 }
