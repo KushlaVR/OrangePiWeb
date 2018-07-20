@@ -1,5 +1,4 @@
 <?php
-
 /**
  * pcf8574 short summary.
  *
@@ -20,7 +19,6 @@ final class pcf8574 extends AbstractPicoPlugin
      * @var boolean
      */
     protected $enabled = true;
-
     /**
      * This plugin depends on ...
      *
@@ -28,7 +26,6 @@ final class pcf8574 extends AbstractPicoPlugin
      * @var string[]
      */
     protected $dependsOn = array();
-
     /**
      * Triggered after Pico has loaded all available plugins
      *
@@ -42,10 +39,8 @@ final class pcf8574 extends AbstractPicoPlugin
      */
     public function onPluginsLoaded(array &$plugins)
     {
-
         // your code
     }
-
     /**
      * Triggered after Pico has read its configuration
      *
@@ -57,7 +52,6 @@ final class pcf8574 extends AbstractPicoPlugin
     {
         // your code
     }
-
     /**
      * Triggered after Pico has evaluated the request URL
      *
@@ -69,7 +63,6 @@ final class pcf8574 extends AbstractPicoPlugin
     {
         // your code
     }
-
     /**
      * Triggered after Pico has discovered the content file to serve
      *
@@ -82,7 +75,6 @@ final class pcf8574 extends AbstractPicoPlugin
     {
         // your code
     }
-
     /**
      * Triggered before Pico reads the contents of the file to serve
      *
@@ -95,7 +87,6 @@ final class pcf8574 extends AbstractPicoPlugin
     {
         // your code
     }
-
     /**
      * Triggered after Pico has read the contents of the file to serve
      *
@@ -107,7 +98,6 @@ final class pcf8574 extends AbstractPicoPlugin
     {
         // your code
     }
-
     /**
      * Triggered before Pico reads the contents of a 404 file
      *
@@ -120,7 +110,6 @@ final class pcf8574 extends AbstractPicoPlugin
     {
         // your code
     }
-
     /**
      * Triggered after Pico has read the contents of the 404 file
      *
@@ -132,7 +121,6 @@ final class pcf8574 extends AbstractPicoPlugin
     {
         // your code
     }
-
     /**
      * Triggered when Pico reads its known meta header fields
      *
@@ -146,7 +134,6 @@ final class pcf8574 extends AbstractPicoPlugin
     {
         // your code
     }
-
     /**
      * Triggered before Pico parses the meta header
      *
@@ -160,7 +147,6 @@ final class pcf8574 extends AbstractPicoPlugin
     {
         // your code
     }
-
     /**
      * Triggered after Pico has parsed the meta header
      *
@@ -172,7 +158,6 @@ final class pcf8574 extends AbstractPicoPlugin
     {
         // your code
     }
-
     /**
      * Triggered before Pico parses the pages content
      *
@@ -186,7 +171,6 @@ final class pcf8574 extends AbstractPicoPlugin
     {
         // your code
     }
-
     /**
      * Triggered after Pico has prepared the raw file contents for parsing
      *
@@ -199,7 +183,6 @@ final class pcf8574 extends AbstractPicoPlugin
     {
         // your code
     }
-
     /**
      * Triggered after Pico has parsed the contents of the file to serve
      *
@@ -211,7 +194,6 @@ final class pcf8574 extends AbstractPicoPlugin
     {
         // your code
     }
-
     /**
      * Triggered before Pico reads all known pages
      *
@@ -224,7 +206,6 @@ final class pcf8574 extends AbstractPicoPlugin
     {
         // your code
     }
-
     /**
      * Triggered when Pico reads a single page from the list of all known pages
      *
@@ -251,7 +232,6 @@ final class pcf8574 extends AbstractPicoPlugin
     {
         // your code
     }
-
     /**
      * Triggered after Pico has read all known pages
      *
@@ -269,14 +249,13 @@ final class pcf8574 extends AbstractPicoPlugin
      * @return void
      */
     public function onPagesLoaded(
-        array &$pages,
-        array &$currentPage = null,
-        array &$previousPage = null,
-        array &$nextPage = null
+    array &$pages,
+    array &$currentPage = null,
+    array &$previousPage = null,
+    array &$nextPage = null
     ) {
         // your code
     }
-
     /**
      * Triggered before Pico registers the twig template engine
      *
@@ -286,7 +265,6 @@ final class pcf8574 extends AbstractPicoPlugin
     {
         // your code
     }
-
     /**
      * Triggered before Pico renders the page
      *
@@ -298,10 +276,13 @@ final class pcf8574 extends AbstractPicoPlugin
      * @return void
      */
     public function onPageRendering(Twig_Environment &$twig, array &$twigVariables, &$templateName)
-    {
+    { 
         // your code
+        $renderBoard = $twigVariables['meta']['PCF8574'];
+        if ($renderBoard){
+            $twigVariables['PCF8574'] = "<h1>PCF8574</h1>";
+        }
     }
-
     /**
      * Triggered after Pico has rendered the page
      *
@@ -312,8 +293,6 @@ final class pcf8574 extends AbstractPicoPlugin
     {
         // your code
     }
-
-
     private function render_php($path)
     {
         ob_start();
