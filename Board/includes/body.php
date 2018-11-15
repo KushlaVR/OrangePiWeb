@@ -20,7 +20,7 @@
     <div class="col-sm-8">
         <h2>Поточний стан</h2>
         <?php renderPartial('includes/_board.php'); ?>
-        <a href="https://www.olx.ua/uk/obyavlenie/plata-rozshirennya-portv-raspbery-pi-raspberry-pi-io-extension-board-IDzQPdy.html" class="btn btn-primary btn-lg" target="_blank">
+        <a href="https://www.olx.ua/uk/obyavlenie/plata-rozshirennya-portv-raspbery-pi-raspberry-pi-io-extension-board-IDCj0Wd.html" class="btn btn-primary btn-lg" target="_blank">
             <span class="glyphicon glyphicon-search"></span> Де купити?
         </a>
         <a href="https://github.com/KushlaVR/OrangePiIOExtensionBoard" class="btn btn-primary btn-lg" target="_blank">
